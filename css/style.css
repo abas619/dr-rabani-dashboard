@@ -147,7 +147,7 @@ a {
   -webkit-text-decoration-skip: objects;
 }
 a:hover {
-  color: var(--secondary);
+  color: var(--primaryDark);
 }
 a:hover,
 a:focus {
@@ -4600,6 +4600,7 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid #e9ecef;
   border-radius: 0px;
+  transition: all 0.25s ease-in-out;
 }
 .card > hr {
   margin-right: 0;
@@ -5827,7 +5828,7 @@ button.close {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 12px;
   border-bottom: 1px solid #e9ecef;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -5845,14 +5846,25 @@ button.close {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 1rem;
+  padding: 12px;
+}
+.modal-body .msg-alert {
+}
+.modal-body .msg-alert h6 {
+  font-size: 16px;
+  color: var(--textDark);
+}
+.modal-body .msg-alert p {
+  font-size: 14px;
+  color: var(--textGray);
+  margin-bottom: 0;
 }
 
 .modal-footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 1rem;
+  padding: 12px;
   border-top: 1px solid #e9ecef;
 }
 .modal-footer > :not(:first-child) {
@@ -17415,6 +17427,11 @@ File: scss
 }
 .card-course .dropdown-menu .dropdown-item.color-danger:hover .mdi {
   color: var(--error);
+}
+
+.card.have-hover:hover {
+  transform: translateY(-5px);
+  background-color: var(--backgroundGray);
 }
 
 /*

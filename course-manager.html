@@ -15,6 +15,8 @@
     <!-- <link href="plugins/libs/morris.js/morris.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css">
     <link href="css/style.css" rel="stylesheet">
+    <link href="plugins/select2/select2.min.css" rel="stylesheet">
+    <link href="plugins/dropzone/dropzone.min.css" rel="stylesheet">
 
     <!-- Icon Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
@@ -437,12 +439,13 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">لیست دوره‌ها</h4>
+                        <h4 class="page-title">مدیریت فایل‌، آزمون، درس</h4>
                         <div class="mt-2">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">داشبورد</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">لیست‌ دوره‌ها</li>
+                                    <li class="breadcrumb-item"><a href="#">لیست‌ دوره‌ها</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">مدیریت فایل</li>
                                 </ol>
                             </nav>
                         </div>
@@ -452,158 +455,138 @@
             <div class="container-fluid">
                 <div class="page-action-group">
                     <div class="btns-group mb-3">
-                        <a href="course-new.html" class="btn btn-primary btn-rounded">
-                            <span class="mdi mdi-plus-circle-outline"></span>دوره
-                            جدید</a>
-                        <button type="button" class="btn btn-outline-secondary btn-rounded" data-bs-toggle="collapse"
-                            href="#filter-content">
-                            <span class="mdi mdi-magnify"></span>جستجو و فیلتر</button>
+                        <a href="courses-list.html" class="btn btn-outline-secondary btn-rounded">
+                            <span class="mdi mdi-arrow-left"></span>بازگشت</a>
                     </div>
-                    <div class="collapse" id="filter-content">
-                        <div class="card card-body">
+                </div>
+                <!-- مشخصات دوره -->
+                <div class="card mt-3 border-0">
+                    <div class="card-body">
+                        <h6 class="card-subtitle">نام دوره</h6>
+                        <h5 class="card-title">چطور فروشتون رو از این‌رو به اون‌رو کنید؟</h5>
+                        <div class="course-files-list mt-4">
+                            <div class="alert alert-danger alert-rounded"> <i class="ti-user"></i>
+                                ابتدا حداقل یک فصل برای این دوره وارد کنید تا سایر موارد در دسترس قرار بگیرد
+                                <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"> <span
+                                        aria-hidden="true">×</span>
+                                </button>
+                            </div>
                             <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-label">عنوان جستجو</label>
-                                        <input type="text" class="form-control" placeholder="جستجو در دوره‌ها">
-                                    </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <a href="course-seasons.html" class="card have-hover">
+                                        <div class="bg-success p-15">
+                                            <div class="text-center text-white display-6">
+                                                <i class="mdi mdi-layers"></i>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex no-block align-items-center">
+                                                <div>
+                                                    <h3 class="font-medium">6</h3>
+                                                    <h5 class="text-success m-b-0">فصل‌ها</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group mb-1">
-                                        <label class="form-label">جستجو در</label>
-                                        <select class="form-select">
-                                            <option>دوره‌ها</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <a href="course-files.html" class="card have-hover">
+                                        <div class="bg-info p-15">
+                                            <div class="text-center text-white display-6">
+                                                <i class="mdi mdi-folder-edit"></i>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex no-block align-items-center">
+                                                <div>
+                                                    <h3 class="font-medium">19</h3>
+                                                    <h5 class="text-info m-b-0">فایل‌ها</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group mb-1">
-                                        <label class="form-label">شامل کلمه یا عبارت</label>
-                                        <select class="form-select">
-                                            <option>کلمه</option>
-                                            <option>3</option>
-                                        </select>
-                                    </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <a href="course-exams.html" class="card have-hover">
+                                        <div class="bg-cyan p-15">
+                                            <div class="text-center text-white display-6">
+                                                <i class="mdi mdi-list-status"></i>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex no-block align-items-center">
+                                                <div>
+                                                    <h3 class="font-medium">3</h3>
+                                                    <h5 class="text-cyan m-b-0">آزمون‌ها</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group mb-0">
-                                        <button type="button" class="btn btn-primary w-100">
-                                            <span class="mdi mdi-magnify"></span>
-                                            جستجو
-                                        </button>
-                                    </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <a href="course-students.html" class="card have-hover">
+                                        <div class="bg-orange p-15">
+                                            <div class="text-center text-white display-6">
+                                                <i class="mdi mdi-account-group"></i>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex no-block align-items-center">
+                                                <div>
+                                                    <h3 class="font-medium">89</h3>
+                                                    <h5 class="text-orange m-b-0">تعداد دانش‌پذیران</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="cards-list">
-                    <h5 class="inner-title">لیست دوره‌ها <span>(978‌دوره)</span></h5>
-                    <div class="card-course">
-                        <div class="card-inner">
-                            <div class="thumb">
-                                <img src="https://via.placeholder.com/100x56/ccc.png" alt="thumb">
+
+                    <!-- <div class="card-body d-none">
+                        <h4 class="card-title">چطور فروشتون رو از این‌رو به اون‌رو کنید؟</h4>
+                        <div class="nav nav-tabs" role="tablist">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#nav-home">
+                                <span class="icon"><i class="mdi mdi-check"></i></span>
+                                <span class="text">فصل</span>
+                            </button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-home2">
+                                <span class="icon"><i class=""></i></span>
+                                <span class="text">فایل‌ها</span>
+                            </button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-home3">
+                                <span class="icon"><i class=""></i></span>
+                                <span class="text">آزمون</span>
+                            </button>
+                        </div>
+                        <div class="tab-content tabcontent-border">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
+                                home
                             </div>
-                            <div class="info">
-                                <ul>
-                                    <li>نام دوره : <span>چطور فروشتون رو از این‌رو به اون‌رو کنید؟</span></li>
-                                    <li>کد دوره : <span>1258</span></li>
-                                    <li>قیمت : <span>380,000</span></li>
-                                    <li>قیمت با تخفیف : <span>0</span></li>
-                                    <li>رایگان : <span class="gray">خیر</span></li>
-                                </ul>
+                            <div class="tab-pane fade" id="nav-home2" role="tabpanel">
+                                profile
                             </div>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
-                                    <i class="mdi mdi-dots-horizontal"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="course-manager.html"><i
-                                                class="mdi mdi-folder-edit-outline"></i>مدیریت
-                                            درس، فایل، آزمون</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="mdi mdi-eye"></i>مشاهده دوره در
-                                            سایت</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#"><i class="mdi mdi-pencil-outline"></i>ویرایش
-                                            دوره</a>
-                                    </li>
-                                    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal"
-                                            data-bs-target="#modal-delete"><i class="mdi mdi-trash-can-outline"></i>حذف
-                                            دوره</a></li>
-                                </ul>
+                            <div class="tab-pane fade" id="nav-home3" role="tabpanel">
+                                message
                             </div>
                         </div>
-                    </div>
-                    <div class="card-course">
-                        <div class="card-inner">
-                            <div class="thumb">
-                                <img src="https://via.placeholder.com/100x56/ccc.png" alt="thumb">
-                            </div>
-                            <div class="info">
-                                <ul>
-                                    <li>نام دوره : <span>جلسه اول آنلاین تربیت کوچ سیزدهم | مدیریت زمان</span></li>
-                                    <li>کد دوره : <span>1257</span></li>
-                                    <li>قیمت : <span>600,000</span></li>
-                                    <li>قیمت با تخفیف : <span>600,000</span></li>
-                                    <li>رایگان : <span class="success">بله</span></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
-                                    <i class="mdi mdi-dots-horizontal"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="course-manager.html"><i
-                                                class="mdi mdi-folder-edit-outline"></i>مدیریت
-                                            درس، فایل، آزمون</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="mdi mdi-eye"></i>مشاهده دوره در
-                                            سایت</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#"><i class="mdi mdi-pencil-outline"></i>ویرایش
-                                            دوره</a>
-                                    </li>
-                                    <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal"
-                                            data-bs-target="#modal-delete"><i class="mdi mdi-trash-can-outline"></i>حذف
-                                            دوره</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Modal Delete -->
-    <div class="modal fade" id="modal-delete" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5"><i class="mdi mdi-trash-can-outline"></i>حذف</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="msg-alert">
-                        <h6>این دوره حذف شود؟</h6>
-                        <p>با حذف این دوره تمام آزمون‌ها، سرفصل‌ها و ... حذف خواهد شد</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">خیر</button>
-                    <button type="button" class="btn btn-danger">بله، حذف شود</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 
     <script src="js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="plugins/select2/select2.min.js"></script>
+    <script src="plugins/select2/select2-init.js"></script>
+    <script src="plugins/dropzone/dropzone.min.js"></script>
+    <script src="plugins/dropzone/dropzone.init.js"></script>
+    <script src="plugins/tinymce/tinymce.min.js"></script>
+    <script src="plugins/tinymce/tinymce.init.js"></script>
 
 
 </body>
