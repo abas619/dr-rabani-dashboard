@@ -18,6 +18,7 @@
     <link href="plugins/select2/select2.min.css" rel="stylesheet">
     <link href="plugins/dropzone/dropzone.min.css" rel="stylesheet">
     <link href="plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet">
+    <link href="plugins/persian-calender/persian-datepicker.css" rel="stylesheet">
 
     <!-- Icon Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
@@ -440,13 +441,14 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">مدیریت فایل‌، آزمون، درس</h4>
+                        <h4 class="page-title">فایل‌ها</h4>
                         <div class="mt-2">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">داشبورد</a></li>
                                     <li class="breadcrumb-item"><a href="#">لیست‌ دوره‌ها</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">مدیریت فایل</li>
+                                    <li class="breadcrumb-item"><a href="#">نام دوره</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">مدیریت فایل‌ها</li>
                                 </ol>
                             </nav>
                         </div>
@@ -456,116 +458,210 @@
             <div class="container-fluid">
                 <div class="page-action-group">
                     <div class="btns-group mb-3">
-                        <a href="courses-list.html" class="btn btn-outline-secondary btn-rounded">
+                        <button class="btn btn-primary btn-rounded icon-right" data-bs-toggle="modal"
+                            data-bs-target="#modal-add-files"><i class="mdi mdi-plus-circle-outline"></i>فایل
+                            جدید</button>
+                        <button type="submit" class="btn btn-secondary btn-rounded icon-right"><i
+                                class="mdi mdi-refresh"></i>بروزرسانی</button>
+                        <a href="course-manager.html" class="btn btn-outline-secondary btn-rounded">
                             <span class="mdi mdi-arrow-left"></span>بازگشت</a>
                     </div>
                 </div>
                 <!-- مشخصات دوره -->
-                <div class="card mt-3 border-0">
-                    <div class="card-body">
-                        <h6 class="card-subtitle">نام دوره</h6>
-                        <h5 class="card-title">چطور فروشتون رو از این‌رو به اون‌رو کنید؟</h5>
-                        <div class="course-files-list mt-4">
-                            <div class="alert alert-danger alert-rounded"> <i class="ti-user"></i>
-                                ابتدا حداقل یک فصل برای این دوره تعریف کنید تا سایر موارد در دسترس قرار بگیرد
-                                <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"> <span
-                                        aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <a href="course-seasons.html" class="card have-hover">
-                                        <div class="c-header bg-success p-15">
-                                            <div class="text-center text-white display-6">
-                                                <i class="mdi mdi-layers"></i>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="d-flex no-block align-items-center">
-                                                <div>
-                                                    <h3 class="font-medium">6</h3>
-                                                    <h5 class="text-success m-b-0">فصل‌ها</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <a href="course-files.html" class="card have-hover">
-                                        <div class="c-header bg-info p-15">
-                                            <div class="text-center text-white display-6">
-                                                <i class="mdi mdi-folder-edit"></i>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="d-flex no-block align-items-center">
-                                                <div>
-                                                    <h3 class="font-medium">19</h3>
-                                                    <h5 class="text-info m-b-0">فایل‌ها</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <a href="course-exams.html" class="card have-hover">
-                                        <div class="c-header bg-cyan p-15">
-                                            <div class="text-center text-white display-6">
-                                                <i class="mdi mdi-list-status"></i>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="d-flex no-block align-items-center">
-                                                <div>
-                                                    <h3 class="font-medium">3</h3>
-                                                    <h5 class="text-cyan m-b-0">آزمون‌ها</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <a href="course-students.html" class="card have-hover">
-                                        <div class="c-header bg-orange p-15">
-                                            <div class="text-center text-white display-6">
-                                                <i class="mdi mdi-account-group"></i>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="d-flex no-block align-items-center">
-                                                <div>
-                                                    <h3 class="font-medium">89</h3>
-                                                    <h5 class="text-orange m-b-0">تعداد دانش‌پذیران</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <div class="card have-hover disabled" id="sweetalert-warning"
-                                        data-swal-template="#my-template">
-                                        <div class="c-header bg-success p-15">
-                                            <div class="text-center text-white display-6">
-                                                <i class="mdi mdi-layers"></i>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="d-flex no-block align-items-center">
-                                                <div>
-                                                    <h3 class="font-medium">6</h3>
-                                                    <h5 class="text-success m-b-0">فصل‌ها</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="cards-list">
+                    <h5 class="inner-title">لیست فایل‌ها <span>(12 فایل)</span></h5>
+                    <div class="table-content table-responsive">
+                        <table class="table table-striped align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">کد دوره</th>
+                                    <th scope="col">کد فصل</th>
+                                    <th scope="col">نام فایل</th>
+                                    <th scope="col">زمان فایل (دقیقه)</th>
+                                    <th scope="col">حجم فایل (مگابایت)</th>
+                                    <th scope="col">پسوند فایل</th>
+                                    <th scope="col">الویت نمایش</th>
+                                    <th scope="col">عملیات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1259</td>
+                                    <td>4930</td>
+                                    <td>مدیریت و پیگیری OKRها</td>
+                                    <td>20</td>
+                                    <td>27</td>
+                                    <td>mp4</td>
+                                    <td>1</td>
+                                    <td>
+                                        <button class="btn btn-circle btn-info" data-bs-toggle="modal"
+                                            data-bs-target="#modal-add-files"><i class="mdi mdi-pencil"></i></button>
+                                        <button class="btn btn-circle btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#modal-delete"><i
+                                                class="mdi mdi-trash-can-outline"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1259</td>
+                                    <td>4931</td>
+                                    <td>فرآیند طراحی OKR برای یک گروه</td>
+                                    <td>16</td>
+                                    <td>27</td>
+                                    <td>mp4</td>
+                                    <td>2</td>
+                                    <td>
+                                        <button class="btn btn-circle btn-info" data-bs-toggle="modal"
+                                            data-bs-target="#modal-add-files"><i class="mdi mdi-pencil"></i></button>
+                                        <button class="btn btn-circle btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#modal-delete"><i
+                                                class="mdi mdi-trash-can-outline"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <!-- Modal Add Files -->
+    <div class="modal fade" id="modal-add-files" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5"><i class="mdi mdi-plus-circle-outline"></i>فایل جدید</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="m-t-10">
+                        <div class="radio-group mb-1">
+                            <label class="form-label">محل بارگذاری فایل</label>
+                            <div class="radio-inner">
+                                <div class="custom-control custom-radio custom-control-inline m-t-10">
+                                    <input type="radio" class="custom-control-input" id="radio-files-1"
+                                        onchange="toggleRadio_files(1)" name="radio-stacked" checked>
+                                    <label class="custom-control-label" for="radio-files-1">سرور داخلی</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline m-t-10">
+                                    <input type="radio" class="custom-control-input" id="radio-files-2"
+                                        onchange="toggleRadio_files(2)" name="radio-stacked">
+                                    <label class="custom-control-label" for="radio-files-2">ابرآروان</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="files-form active" id="files-1">
+                            فایل های سرور
+                        </div>
+                        <div class="files-form" id="files-2">
+                            فایل‌های ابر آروان
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">عنوان فایل</label>
+                                    <input type="text" class="form-control" placeholder="عنوان فایل را وارد کنید">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">نام فایل</label>
+                                    <input type="text" class="form-control" placeholder="عنوان فایل را وارد کنید">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">الویت نمایش</label>
+                                    <input type="number" class="form-control" placeholder="مثال : 1">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">تاریخ نمایش</label>
+                                    <input type="text" class="form-control date-picker" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group mb-1">
+                                    <label class="form-label">نوع فایل</label>
+                                    <select class="form-select">
+                                        <option>فیلم</option>
+                                        <option>تصویر</option>
+                                        <option>صوتی</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="form-label">زمان</label>
+                                    <input type="text" class="form-control" placeholder="به دقیقه وارد کنید">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="form-label">حجم</label>
+                                    <input type="text" class="form-control" placeholder="به مگابایت وارد کنید">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="SwitchCheck-cong-1">
+                                    <label class="form-check-label" for="SwitchCheck-cong-1">فیلم معرفی است
+                                        <span>(توجه داشته
+                                            باشید فقط یک فیلم معرفی برای هر درس حتماً قرار داده شود)</span></label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="SwitchCheck-cong-2">
+                                    <label class="form-check-label" for="SwitchCheck-cong-2">
+                                        به زودی <span>(محتوا آماده نمی باشد؟)</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <form action="/file-upload" class="dropzone m-t-20" id="season-file-server">
+                                    <div class="fallback">
+                                        <input name="file" type="file" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary btn-rounded"
+                        data-bs-dismiss="modal">خیر</button>
+                    <button type="button" class="btn btn-primary btn-rounded">اضافه کن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete -->
+    <div class="modal fade" id="modal-delete" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5"><i class="mdi mdi-trash-can-outline"></i>حذف</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="msg-alert">
+                        <h6>این فایل حذف شود؟</h6>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary btn-rounded"
+                        data-bs-dismiss="modal">خیر</button>
+                    <button type="button" class="btn btn-danger btn-rounded">بله، حذف شود</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <script src="js/jquery.min.js"></script>
@@ -579,6 +675,9 @@
     <script src="plugins/tinymce/tinymce.init.js"></script>
     <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="plugins/sweetalert2/sweetalert2.init.js"></script>
+    <script src="plugins/persian-calender/persian-date.min.js"></script>
+    <script src="plugins/persian-calender/persian-datepicker.min.js"></script>
+    <script src="plugins/persian-calender/persian-datepicker-initial.js"></script>
 
 
 </body>

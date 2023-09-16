@@ -440,13 +440,14 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">مدیریت فایل‌، آزمون، درس</h4>
+                        <h4 class="page-title">فصل‌ها</h4>
                         <div class="mt-2">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">داشبورد</a></li>
                                     <li class="breadcrumb-item"><a href="#">لیست‌ دوره‌ها</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">مدیریت فایل</li>
+                                    <li class="breadcrumb-item"><a href="#">نام دوره</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">مدیریت فصل‌ها</li>
                                 </ol>
                             </nav>
                         </div>
@@ -456,116 +457,131 @@
             <div class="container-fluid">
                 <div class="page-action-group">
                     <div class="btns-group mb-3">
-                        <a href="courses-list.html" class="btn btn-outline-secondary btn-rounded">
+                        <button class="btn btn-primary btn-rounded icon-right" data-bs-toggle="modal"
+                            data-bs-target="#modal-add-season"><i class="mdi mdi-plus-circle-outline"></i>فصل
+                            جدید</button>
+                        <button type="submit" class="btn btn-secondary btn-rounded icon-right"><i
+                                class="mdi mdi-refresh"></i>بروزرسانی</button>
+                        <a href="course-manager.html" class="btn btn-outline-secondary btn-rounded">
                             <span class="mdi mdi-arrow-left"></span>بازگشت</a>
                     </div>
                 </div>
                 <!-- مشخصات دوره -->
-                <div class="card mt-3 border-0">
-                    <div class="card-body">
-                        <h6 class="card-subtitle">نام دوره</h6>
-                        <h5 class="card-title">چطور فروشتون رو از این‌رو به اون‌رو کنید؟</h5>
-                        <div class="course-files-list mt-4">
-                            <div class="alert alert-danger alert-rounded"> <i class="ti-user"></i>
-                                ابتدا حداقل یک فصل برای این دوره تعریف کنید تا سایر موارد در دسترس قرار بگیرد
-                                <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"> <span
-                                        aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <a href="course-seasons.html" class="card have-hover">
-                                        <div class="c-header bg-success p-15">
-                                            <div class="text-center text-white display-6">
-                                                <i class="mdi mdi-layers"></i>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="d-flex no-block align-items-center">
-                                                <div>
-                                                    <h3 class="font-medium">6</h3>
-                                                    <h5 class="text-success m-b-0">فصل‌ها</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <a href="course-files.html" class="card have-hover">
-                                        <div class="c-header bg-info p-15">
-                                            <div class="text-center text-white display-6">
-                                                <i class="mdi mdi-folder-edit"></i>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="d-flex no-block align-items-center">
-                                                <div>
-                                                    <h3 class="font-medium">19</h3>
-                                                    <h5 class="text-info m-b-0">فایل‌ها</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <a href="course-exams.html" class="card have-hover">
-                                        <div class="c-header bg-cyan p-15">
-                                            <div class="text-center text-white display-6">
-                                                <i class="mdi mdi-list-status"></i>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="d-flex no-block align-items-center">
-                                                <div>
-                                                    <h3 class="font-medium">3</h3>
-                                                    <h5 class="text-cyan m-b-0">آزمون‌ها</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <a href="course-students.html" class="card have-hover">
-                                        <div class="c-header bg-orange p-15">
-                                            <div class="text-center text-white display-6">
-                                                <i class="mdi mdi-account-group"></i>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="d-flex no-block align-items-center">
-                                                <div>
-                                                    <h3 class="font-medium">89</h3>
-                                                    <h5 class="text-orange m-b-0">تعداد دانش‌پذیران</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <div class="card have-hover disabled" id="sweetalert-warning"
-                                        data-swal-template="#my-template">
-                                        <div class="c-header bg-success p-15">
-                                            <div class="text-center text-white display-6">
-                                                <i class="mdi mdi-layers"></i>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="d-flex no-block align-items-center">
-                                                <div>
-                                                    <h3 class="font-medium">6</h3>
-                                                    <h5 class="text-success m-b-0">فصل‌ها</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="cards-list">
+                    <h5 class="inner-title">لیست فصل‌ها <span>(12 فصل)</span></h5>
+                    <div class="table-content table-responsive">
+                        <table class="table table-striped align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">کد دوره</th>
+                                    <th scope="col">کد فصل</th>
+                                    <th scope="col">نام فصل</th>
+                                    <th scope="col">الویت نمایش</th>
+                                    <th scope="col">عملیات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1259</td>
+                                    <td>4930</td>
+                                    <td>مقدمه</td>
+                                    <td>1</td>
+                                    <td>
+                                        <button class="btn btn-circle btn-info" data-bs-toggle="modal"
+                                            data-bs-target="#modal-add-season"><i class="mdi mdi-pencil"></i></button>
+                                        <button class="btn btn-circle btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#modal-delete"><i
+                                                class="mdi mdi-trash-can-outline"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1259</td>
+                                    <td>4931</td>
+                                    <td>اصول OKR</td>
+                                    <td>2</td>
+                                    <td>
+                                        <button class="btn btn-circle btn-info" data-bs-toggle="modal"
+                                            data-bs-target="#modal-add-season"><i class="mdi mdi-pencil"></i></button>
+                                        <button class="btn btn-circle btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#modal-delete"><i
+                                                class="mdi mdi-trash-can-outline"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1259</td>
+                                    <td>4932</td>
+                                    <td>OKRهای استراتژیک</td>
+                                    <td>3</td>
+                                    <td>
+                                        <button class="btn btn-circle btn-info" data-bs-toggle="modal"
+                                            data-bs-target="#modal-add-season"><i class="mdi mdi-pencil"></i></button>
+                                        <button class="btn btn-circle btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#modal-delete"><i
+                                                class="mdi mdi-trash-can-outline"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <!-- Modal Add Season -->
+    <div class="modal fade" id="modal-add-season">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5"><i class="mdi mdi-plus-circle-outline"></i>فصل جدید</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="m-t-10">
+                        <div class="form-group">
+                            <label class="form-label">عنوان فصل</label>
+                            <input type="text" class="form-control" placeholder="عنوان فصل را وارد کنید">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">الویت نمایش</label>
+                            <input type="number" class="form-control" placeholder="مثال : 1">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary btn-rounded"
+                        data-bs-dismiss="modal">خیر</button>
+                    <button type="button" class="btn btn-primary btn-rounded">اضافه کن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete -->
+    <div class="modal fade" id="modal-delete" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5"><i class="mdi mdi-trash-can-outline"></i>حذف</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="msg-alert">
+                        <h6>این فصل حذف شود؟</h6>
+                        <p>با حذف این فصل تمام آزمون‌ها، فایل‌های مربوطه حذف خواهد شد</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary btn-rounded"
+                        data-bs-dismiss="modal">خیر</button>
+                    <button type="button" class="btn btn-danger btn-rounded">بله، حذف شود</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <script src="js/jquery.min.js"></script>

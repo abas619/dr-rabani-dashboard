@@ -18,3 +18,10 @@ Dropzone.options.fileImagesUploadBg = {
     parallelUploads: 1,
     uploadMultiple: false,
 }
+Dropzone.options.seasonFileServer = {
+    paramName: "file",
+    maxFilesize: 1,
+    url: null,
+    parallelUploads: 1,
+    uploadMultiple: false,
+}

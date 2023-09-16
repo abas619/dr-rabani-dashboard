@@ -7,3 +7,13 @@ if (document.getElementById('btn-menu') !== null) {
         pagewrapper.classList.toggle('full-width')
     }
 }
+
+
+function toggleRadio_files(radioNumber) {
+    const allfilesForm = document.querySelectorAll('.files-form');
+    const activeForm = document.getElementById(`files-${radioNumber}`);
+    allfilesForm.forEach(fileform => {
+        fileform.classList.remove('active')
+    });
+    activeForm.classList.add('active')
+}
