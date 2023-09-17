@@ -441,14 +441,14 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">دانش پذیران دوره</h4>
+                        <h4 class="page-title">آزمون‌های دوره</h4>
                         <div class="mt-2">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">داشبورد</a></li>
                                     <li class="breadcrumb-item"><a href="#">لیست‌ دوره‌ها</a></li>
                                     <li class="breadcrumb-item"><a href="#">نام دوره</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">لیست دانش پذیران</li>
+                                    <li class="breadcrumb-item active" aria-current="page">لیست آزمون‌ها</li>
                                 </ol>
                             </nav>
                         </div>
@@ -458,6 +458,9 @@
             <div class="container-fluid">
                 <div class="page-action-group">
                     <div class="btns-group mb-3">
+                        <button class="btn btn-primary btn-rounded icon-right" data-bs-toggle="modal"
+                            data-bs-target="#modal-add-exam"><i class="mdi mdi-plus-circle-outline"></i>آزمون
+                            جدید</button>
                         <button type="submit" class="btn btn-secondary btn-rounded icon-right"><i
                                 class="mdi mdi-refresh"></i>بروزرسانی</button>
                         <a href="course-manager.html" class="btn btn-outline-secondary btn-rounded">
@@ -466,35 +469,65 @@
                 </div>
                 <!-- مشخصات دوره -->
                 <div class="cards-list">
-                    <h5 class="inner-title">لیست دانش پذیران <span>(96 دانش پذیر)</span></h5>
+                    <h5 class="inner-title">لیست آزمون‌ها</h5>
                     <div class="table-content table-responsive">
                         <table class="table table-striped align-middle">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">نمیدونم چی</th>
-                                    <th scope="col">کد کاربر</th>
-                                    <th scope="col">نام کاربر</th>
-                                    <th scope="col">موبایل</th>
-                                    <th scope="col">زمان خرید</th>
-                                    <th scope="col">شماره فاکتور</th>
-                                    <th scope="col">ادمین سایت</th>
-                                    <th scope="col">هزینه دوره</th>
-                                    <th scope="col">هزینه دوره با تخفیف</th>
+                                    <th scope="col">نام فصل</th>
+                                    <th scope="col">عنوان</th>
+                                    <th scope="col">دفعات مجاز تلاش</th>
+                                    <th scope="col">زمان آزمون(دقیقه)</th>
+                                    <th scope="col">تعداد سوالات</th>
+                                    <th scope="col">وضعیت</th>
+                                    <th scope="col">دارای نمره منفی</th>
+                                    <th scope="col">عملیات</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>1441239</td>
-                                    <td>2087043827</td>
-                                    <td>حسین شاه پوری</td>
-                                    <td>+989384580993</td>
-                                    <td>يکشنبه 26 شهريور 1402</td>
-                                    <td>24147</td>
-                                    <td>--</td>
-                                    <td>380,000</td>
-                                    <td>0</td>
+                                    <td>برقراری ارتباط</td>
+                                    <td>آزمون برای همه فصول</td>
+                                    <td>5</td>
+                                    <td>20</td>
+                                    <td>34</td>
+                                    <td class="success">فعال</td>
+                                    <td class="error">بله</td>
+                                    <td>
+                                        <a href="course-exam-questions.html" class="btn btn-circle btn-success"
+                                            data-bs-toggle="tooltip" data-bs-title="لیست سوالات"><i
+                                                class="mdi mdi-list-status"></i></a>
+                                        <a href="course-exam-students.html" class="btn btn-circle btn-warning"
+                                            data-bs-toggle="tooltip" data-bs-title="شرکت کنندگان آزمون"><i
+                                                class="mdi mdi-account-multiple"></i></a>
+                                        <button class="btn btn-circle btn-info" data-bs-toggle="modal"
+                                            data-bs-target="#modal-add-files"><i class="mdi mdi-pencil"></i></button>
+                                        <button class="btn btn-circle btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#modal-delete"><i
+                                                class="mdi mdi-trash-can-outline"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>برقراری ارتباط</td>
+                                    <td>آزمون برای همه فصول</td>
+                                    <td>3</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td class="warning">تعلیق</td>
+                                    <td class="success">خیر</td>
+                                    <td>
+                                        <a href="course-exam-questions.html" class="btn btn-circle btn-success"
+                                            data-bs-toggle="tooltip" data-bs-title="لیست سوالات"><i
+                                                class="mdi mdi-list-status"></i></a>
+                                        <a href="course-exam-students.html" class="btn btn-circle btn-warning"
+                                            data-bs-toggle="tooltip" data-bs-title="شرکت کنندگان آزمون"><i
+                                                class="mdi mdi-account-multiple"></i></a>
+                                        <button class="btn btn-circle btn-info" data-bs-toggle="modal"
+                                            data-bs-target="#modal-add-files"><i class="mdi mdi-pencil"></i></button>
+                                        <button class="btn btn-circle btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#modal-delete"><i
+                                                class="mdi mdi-trash-can-outline"></i></button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

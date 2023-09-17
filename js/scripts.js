@@ -1,3 +1,6 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 if (document.getElementById('btn-menu') !== null) {
     var btnMenu = document.getElementById('btn-menu');
     var sidebar = document.getElementById('sidebar');

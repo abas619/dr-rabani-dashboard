@@ -536,7 +536,7 @@
                 </div>
                 <div class="modal-body">
                     <form class="m-t-10">
-                        <div class="radio-group mb-1">
+                        <div class="radio-group mb-3">
                             <label class="form-label">محل بارگذاری فایل</label>
                             <div class="radio-inner">
                                 <div class="custom-control custom-radio custom-control-inline m-t-10">
@@ -551,82 +551,92 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- بارگذاری فایل بروی سرور -->
                         <div class="files-form active" id="files-1">
-                            فایل های سرور
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-label">عنوان فایل</label>
+                                        <input type="text" class="form-control" placeholder="عنوان فایل را وارد کنید">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-label">نام فایل</label>
+                                        <input type="text" class="form-control" placeholder="عنوان فایل را وارد کنید">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group mb-1">
+                                        <label class="form-label">انتخاب فصل</label>
+                                        <select class="form-select">
+                                            <option>نام فصل 1</option>
+                                            <option>نام فصل 2</option>
+                                            <option>نام فصل 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-label">الویت نمایش</label>
+                                        <input type="number" class="form-control" placeholder="مثال : 1">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-label">تاریخ نمایش</label>
+                                        <input type="text" class="form-control date-picker" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group mb-1">
+                                        <label class="form-label">نوع فایل</label>
+                                        <select class="form-select">
+                                            <option>فیلم</option>
+                                            <option>تصویر</option>
+                                            <option>صوتی</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-label">زمان</label>
+                                        <input type="text" class="form-control" placeholder="به دقیقه وارد کنید">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-label">حجم</label>
+                                        <input type="text" class="form-control" placeholder="به مگابایت وارد کنید">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="SwitchCheck-cong-1">
+                                        <label class="form-check-label" for="SwitchCheck-cong-1">فیلم معرفی است
+                                            <span>(توجه داشته
+                                                باشید فقط یک فیلم معرفی برای هر درس حتماً قرار داده شود)</span></label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="SwitchCheck-cong-2">
+                                        <label class="form-check-label" for="SwitchCheck-cong-2">
+                                            به زودی <span>(محتوا آماده نمی باشد؟)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group m-t-20">
+                                        <label class="form-label">بارگذاری فایل</label>
+                                        <div class="modal-file-upload"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <!-- بارگذاری فایل از ابرآروان -->
                         <div class="files-form" id="files-2">
                             فایل‌های ابر آروان
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">عنوان فایل</label>
-                                    <input type="text" class="form-control" placeholder="عنوان فایل را وارد کنید">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">نام فایل</label>
-                                    <input type="text" class="form-control" placeholder="عنوان فایل را وارد کنید">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">الویت نمایش</label>
-                                    <input type="number" class="form-control" placeholder="مثال : 1">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">تاریخ نمایش</label>
-                                    <input type="text" class="form-control date-picker" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="form-group mb-1">
-                                    <label class="form-label">نوع فایل</label>
-                                    <select class="form-select">
-                                        <option>فیلم</option>
-                                        <option>تصویر</option>
-                                        <option>صوتی</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label class="form-label">زمان</label>
-                                    <input type="text" class="form-control" placeholder="به دقیقه وارد کنید">
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label class="form-label">حجم</label>
-                                    <input type="text" class="form-control" placeholder="به مگابایت وارد کنید">
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="SwitchCheck-cong-1">
-                                    <label class="form-check-label" for="SwitchCheck-cong-1">فیلم معرفی است
-                                        <span>(توجه داشته
-                                            باشید فقط یک فیلم معرفی برای هر درس حتماً قرار داده شود)</span></label>
-                                </div>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch"
-                                        id="SwitchCheck-cong-2">
-                                    <label class="form-check-label" for="SwitchCheck-cong-2">
-                                        به زودی <span>(محتوا آماده نمی باشد؟)</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <form action="/file-upload" class="dropzone m-t-20" id="season-file-server">
-                                    <div class="fallback">
-                                        <input name="file" type="file" />
-                                    </div>
-                                </form>
-                            </div>
                         </div>
                     </form>
                 </div>
@@ -638,6 +648,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Modal Delete -->
     <div class="modal fade" id="modal-delete" tabindex="-1">
@@ -660,7 +671,6 @@
             </div>
         </div>
     </div>
-
 
 
 

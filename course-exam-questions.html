@@ -441,14 +441,15 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">دانش پذیران دوره</h4>
+                        <h4 class="page-title">سوالات آزمون چگونه اینطوری شد</h4>
                         <div class="mt-2">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">داشبورد</a></li>
                                     <li class="breadcrumb-item"><a href="#">لیست‌ دوره‌ها</a></li>
                                     <li class="breadcrumb-item"><a href="#">نام دوره</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">لیست دانش پذیران</li>
+                                    <li class="breadcrumb-item"><a href="#">لیست آزمون‌ها</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">لیست سوالات</li>
                                 </ol>
                             </nav>
                         </div>
@@ -458,43 +459,42 @@
             <div class="container-fluid">
                 <div class="page-action-group">
                     <div class="btns-group mb-3">
+                        <button class="btn btn-primary btn-rounded icon-right" data-bs-toggle="modal"
+                            data-bs-target="#modal-add-question"><i class="mdi mdi-plus-circle-outline"></i>سوال
+                            جدید</button>
                         <button type="submit" class="btn btn-secondary btn-rounded icon-right"><i
                                 class="mdi mdi-refresh"></i>بروزرسانی</button>
-                        <a href="course-manager.html" class="btn btn-outline-secondary btn-rounded">
+                        <a href="course-exams.html" class="btn btn-outline-secondary btn-rounded">
                             <span class="mdi mdi-arrow-left"></span>بازگشت</a>
                     </div>
                 </div>
                 <!-- مشخصات دوره -->
                 <div class="cards-list">
-                    <h5 class="inner-title">لیست دانش پذیران <span>(96 دانش پذیر)</span></h5>
+                    <h5 class="inner-title">لیست سوالات</h5>
                     <div class="table-content table-responsive">
                         <table class="table table-striped align-middle">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">نمیدونم چی</th>
-                                    <th scope="col">کد کاربر</th>
-                                    <th scope="col">نام کاربر</th>
-                                    <th scope="col">موبایل</th>
-                                    <th scope="col">زمان خرید</th>
-                                    <th scope="col">شماره فاکتور</th>
-                                    <th scope="col">ادمین سایت</th>
-                                    <th scope="col">هزینه دوره</th>
-                                    <th scope="col">هزینه دوره با تخفیف</th>
+                                    <th scope="col">ردیف</th>
+                                    <th scope="col">سوال</th>
+                                    <th scope="col">گزینه درست</th>
+                                    <th scope="col">وضعیت</th>
+                                    <th scope="col">عملیات</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>1441239</td>
-                                    <td>2087043827</td>
-                                    <td>حسین شاه پوری</td>
-                                    <td>+989384580993</td>
-                                    <td>يکشنبه 26 شهريور 1402</td>
-                                    <td>24147</td>
-                                    <td>--</td>
-                                    <td>380,000</td>
-                                    <td>0</td>
+                                    <td>چگونه اینطوری شد</td>
+                                    <td>1</td>
+                                    <td class="success">فعال</td>
+                                    <td>
+                                        <button class="btn btn-circle btn-info" data-bs-toggle="modal"
+                                            data-bs-target="#modal-add-question"><i class="mdi mdi-pencil"></i></button>
+                                        <button class="btn btn-circle btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#modal-delete"><i
+                                                class="mdi mdi-trash-can-outline"></i></button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -504,74 +504,73 @@
         </div>
     </div>
 
-
-    <!-- Modal Add Exam -->
-    <div class="modal fade" id="modal-add-exam">
+    <!-- Modal Add Question -->
+    <div class="modal fade" id="modal-add-question" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5"><i class="mdi mdi-plus-circle-outline"></i>آزمون جدید</h1>
+                    <h1 class="modal-title fs-5"><i class="mdi mdi-plus-circle-outline"></i>سوال جدید</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form class="m-t-10">
                         <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label class="form-label">سوال</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label class="form-label">نام آزمون</label>
+                                    <label class="form-label">جواب شماره یک</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">جواب شماره دو</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">جواب شماره سه</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">جواب شماره چهار</label>
                                     <input type="text" class="form-control" placeholder="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group mb-1">
-                                    <label class="form-label">انتخاب فصل</label>
+                                    <label class="form-label">پاسخ درست</label>
                                     <select class="form-select">
-                                        <option>نام فصل 1</option>
-                                        <option>نام فصل 2</option>
-                                        <option>نام فصل 3</option>
+                                        <option>گزینه اول</option>
+                                        <option>گزینه دوم</option>
+                                        <option>گزینه سوم</option>
+                                        <option>گزینه چهارم</option>
                                     </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label class="form-label">دفعات شرکت در آزمون</label>
-                                    <input type="number" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label class="form-label">تعداد سوالات قابل نمایش</label>
-                                    <input type="number" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label class="form-label">زمان آزمون (دقیقه)</label>
-                                    <input type="number" class="form-control" placeholder="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="radio-group mb-3">
-                                    <label class="form-label">آزمون دارای نمره منفی می‌باشد؟</label>
+                                    <label class="form-label">وضعیت</label>
                                     <div class="radio-inner">
                                         <div class="custom-control custom-radio custom-control-inline m-t-10">
                                             <input type="radio" class="custom-control-input" id="custom-radio-01"
                                                 name="radio-stacked" checked>
-                                            <label class="custom-control-label" for="custom-radio-01">بله</label>
+                                            <label class="custom-control-label" for="custom-radio-01">فعال</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline m-t-10">
                                             <input type="radio" class="custom-control-input" id="custom-radio-02"
                                                 name="radio-stacked">
-                                            <label class="custom-control-label" for="custom-radio-02">خیر</label>
+                                            <label class="custom-control-label" for="custom-radio-02">غیرفعال</label>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label class="form-label">توضیحات</label>
-                                    <textarea class="form-control" rows="3"
-                                        placeholder="توضیحاتی در رابطه با آزمون بنویسید"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -585,30 +584,6 @@
             </div>
         </div>
     </div>
-
-
-    <!-- Modal Delete -->
-    <div class="modal fade" id="modal-delete" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5"><i class="mdi mdi-trash-can-outline"></i>حذف</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="msg-alert">
-                        <h6>این آزمون حذف شود؟</h6>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary btn-rounded"
-                        data-bs-dismiss="modal">خیر</button>
-                    <button type="button" class="btn btn-danger btn-rounded">بله، حذف شود</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 
     <script src="js/jquery.min.js"></script>
