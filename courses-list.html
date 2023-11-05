@@ -45,25 +45,24 @@
         <header class="topbar">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header">
-                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
-                        <i class="ti-menu ti-close"></i>
-                    </a>
                     <a class="navbar-brand" href="index.html">
                         <img src="images/logo-mini.png" alt="">
                     </a>
                 </div>
-                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                <div class="navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav float-left mr-auto">
-                        <li class="nav-item d-none d-md-block">
+                        <li class="nav-item">
                             <a class="nav-link sidebartoggler" href="#" data-sidebartype="mini-sidebar" id="btn-menu">
                                 <i class="mdi mdi-menu"></i>
                             </a>
                         </li>
+                    </ul>
+                    <ul class="navbar-nav float-right">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                                 <i class="mdi mdi-bell-outline"></i>
                             </a>
-                            <div class="dropdown-menu mailbox">
+                            <div class="dropdown-menu dropdown-menu-right mailbox">
                                 <span class="with-arrow">
                                     <span class="bg-primary"></span>
                                 </span>
@@ -136,7 +135,7 @@
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                                 <i class="mdi mdi-email-outline"></i>
                             </a>
-                            <div class="dropdown-menu mailbox">
+                            <div class="dropdown-menu dropdown-menu-right mailbox">
                                 <span class="with-arrow">
                                     <span class="bg-danger"></span>
                                 </span>
@@ -208,8 +207,6 @@
                                 </ul>
                             </div>
                         </li>
-                    </ul>
-                    <ul class="navbar-nav float-right">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">
                                 <img src="images/users/1.jpg" alt="user" class="rounded-circle" width="31">
@@ -222,7 +219,7 @@
                                     <div class="">
                                         <img src="images/users/1.jpg" alt="user" class="img-circle" width="60">
                                     </div>
-                                    <div class="m-l-10">
+                                    <div class="m-r-10">
                                         <h4 class="m-b-0">نام ادمین</h4>
                                         <p class=" m-b-0">varun@gmail.com</p>
                                     </div>
@@ -432,6 +429,7 @@
                 </nav>
             </div>
         </aside>
+        <div class="side-overlay"></div>
 
         <div class="page-wrapper" id="pageWrapper">
             <div class="page-breadcrumb">

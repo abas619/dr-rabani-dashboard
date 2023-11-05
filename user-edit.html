@@ -15,10 +15,6 @@
     <!-- <link href="plugins/libs/morris.js/morris.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css">
     <link href="css/style.css" rel="stylesheet">
-    <link href="plugins/select2/select2.min.css" rel="stylesheet">
-    <link href="plugins/dropzone/dropzone.min.css" rel="stylesheet">
-    <link href="plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet">
-    <link href="plugins/persian-calender/persian-datepicker.css" rel="stylesheet">
 
     <!-- Icon Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
@@ -243,7 +239,6 @@
                 </div>
             </nav>
         </header>
-        <div class="side-overlay"></div>
 
         <aside class="left-sidebar" id="sidebar">
             <!-- Sidebar scroll-->
@@ -261,7 +256,7 @@
                                 <span class="hide-menu">داشبورد</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
+                        <li class="sidebar-item selected">
                             <a class="sidebar-link" href="users-list.html">
                                 <i class="mdi mdi-account-multiple"></i>
                                 <span class="hide-menu">کاربران سایت</span>
@@ -271,14 +266,14 @@
                         <li class="nav-small-cap">
                             <span class="hide-menu">مخزن</span>
                         </li>
-                        <li class="sidebar-item selected">
+                        <li class="sidebar-item">
                             <a class="sidebar-link has-arrow" href="#collapse-01" data-bs-toggle="collapse">
                                 <i class="mdi mdi-play-circle"></i>
                                 <span class="hide-menu">دوره‌ها</span>
                             </a>
-                            <ul class="collapse first-level show" id="collapse-01">
+                            <ul class="collapse first-level" id="collapse-01">
                                 <li class="sidebar-item">
-                                    <a href="courses-list.html" class="sidebar-link active">
+                                    <a href="courses-list.html" class="sidebar-link">
                                         <span class="hide-menu">لیست دوره‌ها</span>
                                     </a>
                                 </li>
@@ -434,20 +429,19 @@
                 </nav>
             </div>
         </aside>
+        <div class="side-overlay"></div>
 
         <div class="page-wrapper" id="pageWrapper">
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">سوالات آزمون چگونه اینطوری شد</h4>
+                        <h4 class="page-title">کاربر جدید</h4>
                         <div class="mt-2">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">داشبورد</a></li>
-                                    <li class="breadcrumb-item"><a href="#">لیست‌ دوره‌ها</a></li>
-                                    <li class="breadcrumb-item"><a href="#">نام دوره</a></li>
-                                    <li class="breadcrumb-item"><a href="#">لیست آزمون‌ها</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">لیست سوالات</li>
+                                    <li class="breadcrumb-item"><a href="#">همه کاربران</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">کاربر جدید</li>
                                 </ol>
                             </nav>
                         </div>
@@ -457,128 +451,13 @@
             <div class="container-fluid">
                 <div class="page-action-group">
                     <div class="btns-group mb-3">
-                        <button class="btn btn-primary btn-rounded icon-right" data-bs-toggle="modal"
-                            data-bs-target="#modal-add-question"><i class="mdi mdi-plus-circle-outline"></i>سوال
-                            جدید</button>
-                        <button type="submit" class="btn btn-secondary btn-rounded icon-right"><i
-                                class="mdi mdi-refresh"></i>بروزرسانی</button>
-                        <a href="course-exams.html" class="btn btn-outline-secondary btn-rounded">
+                        <button class="btn btn-secondary btn-rounded">
+                            <span class="mdi mdi-check"></span>ثبت کاربر جدید</button>
+                        <a href="users-list.html" class="btn btn-outline-secondary btn-rounded">
                             <span class="mdi mdi-arrow-left"></span>بازگشت</a>
                     </div>
                 </div>
-                <!-- مشخصات دوره -->
-                <div class="cards-list">
-                    <h5 class="inner-title">لیست سوالات</h5>
-                    <div class="table-content table-responsive">
-                        <table class="table table-striped align-middle">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ردیف</th>
-                                    <th scope="col">سوال</th>
-                                    <th scope="col">گزینه درست</th>
-                                    <th scope="col">وضعیت</th>
-                                    <th scope="col">عملیات</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>چگونه اینطوری شد</td>
-                                    <td>1</td>
-                                    <td class="success">فعال</td>
-                                    <td>
-                                        <button class="btn btn-circle btn-info" data-bs-toggle="modal"
-                                            data-bs-target="#modal-add-question"><i class="mdi mdi-pencil"></i></button>
-                                        <button class="btn btn-circle btn-danger" data-bs-toggle="modal"
-                                            data-bs-target="#modal-delete"><i
-                                                class="mdi mdi-trash-can-outline"></i></button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal Add Question -->
-    <div class="modal fade" id="modal-add-question" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5"><i class="mdi mdi-plus-circle-outline"></i>سوال جدید</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="m-t-10">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label class="form-label">سوال</label>
-                                    <input type="text" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">جواب شماره یک</label>
-                                    <input type="text" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">جواب شماره دو</label>
-                                    <input type="text" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">جواب شماره سه</label>
-                                    <input type="text" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label">جواب شماره چهار</label>
-                                    <input type="text" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group mb-1">
-                                    <label class="form-label">پاسخ درست</label>
-                                    <select class="form-select">
-                                        <option>گزینه اول</option>
-                                        <option>گزینه دوم</option>
-                                        <option>گزینه سوم</option>
-                                        <option>گزینه چهارم</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="radio-group mb-3">
-                                    <label class="form-label">وضعیت</label>
-                                    <div class="radio-inner">
-                                        <div class="custom-control custom-radio custom-control-inline m-t-10">
-                                            <input type="radio" class="custom-control-input" id="custom-radio-01"
-                                                name="radio-stacked" checked>
-                                            <label class="custom-control-label" for="custom-radio-01">فعال</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline m-t-10">
-                                            <input type="radio" class="custom-control-input" id="custom-radio-02"
-                                                name="radio-stacked">
-                                            <label class="custom-control-label" for="custom-radio-02">غیرفعال</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary btn-rounded"
-                        data-bs-dismiss="modal">خیر</button>
-                    <button type="button" class="btn btn-primary btn-rounded">اضافه کن</button>
-                </div>
             </div>
         </div>
     </div>
@@ -587,17 +466,16 @@
     <script src="js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="plugins/select2/select2.min.js"></script>
-    <script src="plugins/select2/select2-init.js"></script>
-    <script src="plugins/dropzone/dropzone.min.js"></script>
-    <script src="plugins/dropzone/dropzone.init.js"></script>
-    <script src="plugins/tinymce/tinymce.min.js"></script>
-    <script src="plugins/tinymce/tinymce.init.js"></script>
-    <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
-    <script src="plugins/sweetalert2/sweetalert2.init.js"></script>
-    <script src="plugins/persian-calender/persian-date.min.js"></script>
-    <script src="plugins/persian-calender/persian-datepicker.min.js"></script>
-    <script src="plugins/persian-calender/persian-datepicker-initial.js"></script>
+
+    <!--chartis chart-->
+    <!-- <script src="../../assets/libs/chartist/dist/chartist.min.js"></script> -->
+    <!-- <script src="../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script> -->
+    <!--c3 charts -->
+    <!-- <script src="../../assets/extra-libs/c3/d3.min.js"></script> -->
+    <!-- <script src="../../assets/extra-libs/c3/c3.min.js"></script> -->
+    <!--chartjs -->
+    <!-- <script src="../../assets/libs/raphael/raphael.min.js"></script> -->
+    <!-- <script src="../../assets/libs/morris.js/morris.min.js"></script> -->
 
 
 </body>
