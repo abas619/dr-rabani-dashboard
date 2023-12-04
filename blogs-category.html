@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="fa" class="no-js" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffb200" />
+    <meta name="msapplication-navbutton-color" content="#ffb200">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffb200">
+    <title>Admin | Home</title>
+    <!-- Custom CSS -->
+    <!-- <link href="../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet"> -->
+    <!-- <link href="../../assets/extra-libs/c3/c3.min.css" rel="stylesheet"> -->
+    <!-- <link href="plugins/libs/morris.js/morris.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="plugins/select2/select2.min.css" rel="stylesheet">
+    <link href="plugins/dropzone/dropzone.min.css" rel="stylesheet">
+    <link href="plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet">
+    <link href="plugins/persian-calender/persian-datepicker.css" rel="stylesheet">
+
+    <!-- Icon Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="../images/small-icon.png" /> -->
+    <!-- <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" /> -->
+    <!-- <link rel="apple-touch-icon" sizes="72x72" href="../images/logo-72x72.png" /> -->
+    <!-- <link rel="apple-touch-icon" sizes="114x114" href="../images/logo-114x114.png" /> -->
+
+</head>
+
+<body>
+
+    <div class="preloader d-none">
+        <div class="load-inner">
+            <div class="lds-ripple">
+                <div class="lds-pos"></div>
+                <div class="lds-pos"></div>
+            </div>
+            <h6>چند لحظه صبر کنید</h6>
+        </div>
+    </div>
+
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin1" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full" class="">
+
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo-mini.png" alt="">
+                    </a>
+                </div>
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav float-left mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link sidebartoggler" href="#" data-sidebartype="mini-sidebar" id="btn-menu">
+                                <i class="mdi mdi-menu"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav float-right">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                <i class="mdi mdi-bell-outline"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mailbox">
+                                <span class="with-arrow">
+                                    <span class="bg-primary"></span>
+                                </span>
+                                <ul class="list-style-none">
+                                    <li>
+                                        <div class="drop-title bg-primary text-white">
+                                            <h4 class="m-b-5">4 اعلان جدید</h4>
+                                            <span class="font-light">اعلان‌ها</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="message-center notifications">
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)" class="message-item">
+                                                <span class="btn btn-danger btn-circle">
+                                                    <i class="fa fa-link"></i>
+                                                </span>
+                                                <div class="mail-contnet">
+                                                    <h5 class="message-title">Luanch Admin</h5>
+                                                    <span class="mail-desc">Just see the my new admin!</span>
+                                                    <span class="time">9:30 AM</span>
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)" class="message-item">
+                                                <span class="btn btn-success btn-circle">
+                                                    <i class="ti-calendar"></i>
+                                                </span>
+                                                <div class="mail-contnet">
+                                                    <h5 class="message-title">Event today</h5>
+                                                    <span class="mail-desc">Just a reminder that you have event</span>
+                                                    <span class="time">9:10 AM</span>
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)" class="message-item">
+                                                <span class="btn btn-info btn-circle">
+                                                    <i class="ti-settings"></i>
+                                                </span>
+                                                <div class="mail-contnet">
+                                                    <h5 class="message-title">Settings</h5>
+                                                    <span class="mail-desc">You can customize this template as you
+                                                        want</span>
+                                                    <span class="time">9:08 AM</span>
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)" class="message-item">
+                                                <span class="btn btn-primary btn-circle">
+                                                    <i class="ti-user"></i>
+                                                </span>
+                                                <div class="mail-contnet">
+                                                    <h5 class="message-title">Pavan kumar</h5>
+                                                    <span class="mail-desc">Just see the my admin!</span>
+                                                    <span class="time">9:02 AM</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-center m-b-5" href="javascript:void(0);">
+                                            <strong>Check all notifications</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                <i class="mdi mdi-email-outline"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mailbox">
+                                <span class="with-arrow">
+                                    <span class="bg-danger"></span>
+                                </span>
+                                <ul class="list-style-none">
+                                    <li>
+                                        <div class="drop-title bg-danger text-white">
+                                            <h4 class="m-b-5">5 پیام جدید</h4>
+                                            <span class="font-light">پیام‌ها</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="message-center message-body">
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)" class="message-item">
+                                                <span class="user-img">
+                                                    <img src="images/users/1.jpg" alt="user" class="rounded-circle">
+                                                    <span class="profile-status online pull-right"></span>
+                                                </span>
+                                                <div class="mail-contnet">
+                                                    <h5 class="message-title">Pavan kumar</h5>
+                                                    <span class="mail-desc">Just see the my admin!</span>
+                                                    <span class="time">9:30 AM</span>
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)" class="message-item">
+                                                <span class="user-img">
+                                                    <img src="images/users/2.jpg" alt="user" class="rounded-circle">
+                                                    <span class="profile-status busy pull-right"></span>
+                                                </span>
+                                                <div class="mail-contnet">
+                                                    <h5 class="message-title">Sonu Nigam</h5>
+                                                    <span class="mail-desc">I've sung a song! See you at</span>
+                                                    <span class="time">9:10 AM</span>
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)" class="message-item">
+                                                <span class="user-img">
+                                                    <img src="images/users/3.jpg" alt="user" class="rounded-circle">
+                                                    <span class="profile-status away pull-right"></span>
+                                                </span>
+                                                <div class="mail-contnet">
+                                                    <h5 class="message-title">Arijit Sinh</h5>
+                                                    <span class="mail-desc">I am a singer!</span>
+                                                    <span class="time">9:08 AM</span>
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)" class="message-item">
+                                                <span class="user-img">
+                                                    <img src="images/users/4.jpg" alt="user" class="rounded-circle">
+                                                    <span class="profile-status offline pull-right"></span>
+                                                </span>
+                                                <div class="mail-contnet">
+                                                    <h5 class="message-title">Pavan kumar</h5>
+                                                    <span class="mail-desc">Just see the my admin!</span>
+                                                    <span class="time">9:02 AM</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-center link" href="javascript:void(0);">
+                                            <b>See all e-Mails</b>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">
+                                <img src="images/users/1.jpg" alt="user" class="rounded-circle" width="31">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd">
+                                <span class="with-arrow">
+                                    <span class="bg-primary"></span>
+                                </span>
+                                <div class="d-flex no-block align-items-center p-15 bg-primary text-white m-b-10">
+                                    <div class="">
+                                        <img src="images/users/1.jpg" alt="user" class="img-circle" width="60">
+                                    </div>
+                                    <div class="m-r-10">
+                                        <h4 class="m-b-0">نام ادمین</h4>
+                                        <p class=" m-b-0">varun@gmail.com</p>
+                                    </div>
+                                </div>
+                                <a class="dropdown-item" href="#">
+                                    <i class="mdi mdi-monitor"></i> صفحه اصلی سایت</a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="mdi mdi-cog-outline"></i> تنظیمات</a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="mdi mdi-email-outline"></i> پیام‌های دریافتی</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">
+                                    <i class="mdi mdi-logout"></i> خروج</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="left-sidebar" id="sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <!-- پنل مدیریت -->
+                        <li class="nav-small-cap">
+                            <span class="hide-menu">پنل مدیریت</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="index.html">
+                                <i class="mdi mdi-view-dashboard"></i>
+                                <span class="hide-menu">داشبورد</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="users-list.html">
+                                <i class="mdi mdi-account-multiple"></i>
+                                <span class="hide-menu">کاربران سایت</span>
+                            </a>
+                        </li>
+                        <!-- مخزن -->
+                        <li class="nav-small-cap">
+                            <span class="hide-menu">مخزن</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#collapse-01" data-bs-toggle="collapse">
+                                <i class="mdi mdi-play-circle"></i>
+                                <span class="hide-menu">دوره‌ها</span>
+                            </a>
+                            <ul class="collapse first-level" id="collapse-01">
+                                <li class="sidebar-item">
+                                    <a href="courses-list.html" class="sidebar-link">
+                                        <span class="hide-menu">لیست دوره‌ها</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="courses-category.html" class="sidebar-link">
+                                        <span class="hide-menu">دسته‌بندی</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="courses-comments.html" class="sidebar-link">
+                                        <span class="hide-menu">کامنت‌ها</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="teachers-list.html">
+                                <i class="mdi mdi-human-male-board"></i>
+                                <span class="hide-menu">اساتید</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item selected">
+                            <a class="sidebar-link has-arrow" href="#collapse-02" data-bs-toggle="collapse">
+                                <i class="mdi mdi-post"></i>
+                                <span class="hide-menu">وبلاگ</span>
+                            </a>
+                            <ul class="collapse first-level show" id="collapse-02">
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link active" href="blogs-category.html">
+                                        <span class="hide-menu">دسته‌بندی‌ بلاگ</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link" href="blogs-list.html">
+                                        <span class="hide-menu">لیست‌ پست‌ها</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="skills-list.html">
+                                <i class="mdi mdi-book-open-page-variant"></i>
+                                <span class="hide-menu">مهارت‌ها</span>
+                            </a>
+                        </li>
+                        <!-- امور مالی -->
+                        <li class="nav-small-cap">
+                            <span class="hide-menu">امور مالی</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="transactions-list.html">
+                                <i class="mdi mdi-receipt-text-check"></i>
+                                <span class="hide-menu">لیست تراکنش‌ها</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="discounts.html">
+                                <i class="mdi mdi-percent-circle"></i>
+                                <span class="hide-menu">تخفیف‌ها</span>
+                            </a>
+                        </li>
+                        <!-- امکانات -->
+                        <li class="nav-small-cap">
+                            <span class="hide-menu">امکانات</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="zones-list.html">
+                                <i class="mdi mdi-layers"></i>
+                                <span class="hide-menu">زون‌های صفحه اول</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="promotions-list.html">
+                                <i class="mdi mdi-image-multiple"></i>
+                                <span class="hide-menu">پروموشن‌ها</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="#collapse-03" data-bs-toggle="collapse">
+                                <i class="mdi mdi-page-layout-sidebar-right"></i>
+                                <span class="hide-menu">لندینگ</span>
+                            </a>
+                            <ul class="collapse first-level" id="collapse-03">
+                                <li class="sidebar-item">
+                                    <a href="landings-list.html" class="sidebar-link">
+                                        <span class="hide-menu">لیست لندینگ</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="landing-form.html" class="sidebar-link">
+                                        <span class="hide-menu">فرم لندینگ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="partners.html">
+                                <i class="mdi mdi-account-group"></i>
+                                <span class="hide-menu">همکاران‌ ما</span>
+                            </a>
+                        </li>
+                        <!-- ابزار‌ها -->
+                        <li class="nav-small-cap">
+                            <span class="hide-menu">ابزار‌ها</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="file-managers.html">
+                                <i class="mdi mdi-folder-cog"></i>
+                                <span class="hide-menu">مدیریت فایل‌ها</span>
+                            </a>
+                        </li>
+                        <!-- تنظیمات -->
+                        <li class="nav-small-cap">
+                            <span class="hide-menu">تنظیمات</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="setting.html">
+                                <i class="mdi mdi-cog"></i>
+                                <span class="hide-menu">تنظیمات</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="cash-clear.html">
+                                <i class="mdi mdi-eraser"></i>
+                                <span class="hide-menu">پاک کردن کش</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="robot.html">
+                                <i class="mdi mdi-robot"></i>
+                                <span class="hide-menu">فایل ربات (Robot.txt)</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="certificates.html">
+                                <i class="mdi mdi-file-certificate"></i>
+                                <span class="hide-menu">گواهینامه‌ها</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="newsletters.html">
+                                <i class="mdi mdi-newspaper-variant"></i>
+                                <span class="hide-menu">خبرنامه</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="contact-us.html">
+                                <i class="mdi mdi-face-agent"></i>
+                                <span class="hide-menu">ارتباط با ما</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="side-overlay"></div>
+
+        <div class="page-wrapper" id="pageWrapper">
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-5 align-self-center">
+                        <h4 class="page-title">دسته‌بندی وبلاگ</h4>
+                        <div class="mt-2">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">داشبورد</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">لیست بلاگ‌ها</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="page-action-group">
+                    <div class="btns-group mb-3">
+                        <button type="button" class="btn btn-primary btn-rounded" data-bs-toggle="modal"
+                            data-bs-target="#modal-add-category">
+                            <span class="mdi mdi-plus-circle-outline"></span>دسته‌بندی
+                            جدید</button>
+                        <button type="submit" class="btn btn-secondary btn-rounded icon-right"><i
+                                class="mdi mdi-refresh"></i>بروزرسانی</button>
+                        <button type="button" class="btn btn-outline-secondary btn-rounded" data-bs-toggle="collapse"
+                            href="#filter-content">
+                            <span class="mdi mdi-magnify"></span>جستجو و فیلتر</button>
+                    </div>
+                    <div class="collapse" id="filter-content">
+                        <div class="card card-body">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-label">عنوان جستجو</label>
+                                        <input type="text" class="form-control" placeholder="جستجو در دوره‌ها">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group mb-1">
+                                        <label class="form-label">جستجو در</label>
+                                        <select class="form-select">
+                                            <option>نام استاد</option>
+                                            <option>فامیلی استاد</option>
+                                            <option>شناسنامه استاد</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group mb-1">
+                                        <label class="form-label">شامل کلمه یا عبارت</label>
+                                        <select class="form-select">
+                                            <option>کلمه</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group mb-0">
+                                        <button type="button" class="btn btn-primary w-100">
+                                            <span class="mdi mdi-magnify"></span>
+                                            جستجو
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- مشخصات دسته‌بندی‌ها -->
+                <div class="cards-list">
+                    <h5 class="inner-title">لیست دسته‌بندی‌ها <span>(12 دسته بندی)</span></h5>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card card-category">
+                                <div class="card-body">
+                                    <div class="d-flex flex-row">
+                                        <div class="round align-self-center round-success h2">
+                                            <i class="mdi mdi-shape-outline"></i>
+                                        </div>
+                                        <div class="m-r-10 align-self-center">
+                                            <h6>رشد فردی</h6>
+                                            <span class="text-muted">کد دسته لندینیگ : 70</span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><i
+                                                        class="mdi mdi-pencil-outline"></i>ویرایش</a>
+                                            </li>
+                                            <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-delete"><i
+                                                        class="mdi mdi-trash-can-outline"></i>حذف</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card card-category">
+                                <div class="card-body">
+                                    <div class="d-flex flex-row">
+                                        <div class="round align-self-center round-success h2">
+                                            <i class="mdi mdi-shape-outline"></i>
+                                        </div>
+                                        <div class="m-r-10 align-self-center">
+                                            <h6>کتاب‌های صوتی</h6>
+                                            <span class="text-muted">کد دسته لندینیگ : 61</span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><i
+                                                        class="mdi mdi-pencil-outline"></i>ویرایش</a>
+                                            </li>
+                                            <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-delete"><i
+                                                        class="mdi mdi-trash-can-outline"></i>حذف</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card card-category">
+                                <div class="card-body">
+                                    <div class="d-flex flex-row">
+                                        <div class="round align-self-center round-success h2">
+                                            <i class="mdi mdi-shape-outline"></i>
+                                        </div>
+                                        <div class="m-r-10 align-self-center">
+                                            <h6>فروش</h6>
+                                            <span class="text-muted">کد دسته لندینیگ : 59</span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><i
+                                                        class="mdi mdi-pencil-outline"></i>ویرایش</a>
+                                            </li>
+                                            <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-delete"><i
+                                                        class="mdi mdi-trash-can-outline"></i>حذف</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card card-category">
+                                <div class="card-body">
+                                    <div class="d-flex flex-row">
+                                        <div class="round align-self-center round-success h2">
+                                            <i class="mdi mdi-shape-outline"></i>
+                                        </div>
+                                        <div class="m-r-10 align-self-center">
+                                            <h6>بازاریابی</h6>
+                                            <span class="text-muted">کد دسته لندینیگ : 50</span>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><i
+                                                        class="mdi mdi-pencil-outline"></i>ویرایش</a>
+                                            </li>
+                                            <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-delete"><i
+                                                        class="mdi mdi-trash-can-outline"></i>حذف</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete -->
+    <div class="modal fade" id="modal-delete" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5"><i class="mdi mdi-trash-can-outline"></i>حذف</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="msg-alert">
+                        <h6>این آزمون حذف شود؟</h6>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary btn-rounded"
+                        data-bs-dismiss="modal">خیر</button>
+                    <button type="button" class="btn btn-danger btn-rounded">بله، حذف شود</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Add Category -->
+    <div class="modal fade" id="modal-add-category" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5"><i class="mdi mdi-plus-circle-outline"></i>دسته‌بندی جدید</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="form-label">عنوان</label>
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">نام در URL</label>
+                        <input type="url" class="form-control" placeholder="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary btn-rounded"
+                        data-bs-dismiss="modal">بستن</button>
+                    <button type="button" class="btn btn-primary btn-rounded">تایید</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="plugins/select2/select2.min.js"></script>
+    <script src="plugins/select2/select2-init.js"></script>
+    <script src="plugins/dropzone/dropzone.min.js"></script>
+    <script src="plugins/dropzone/dropzone.init.js"></script>
+    <script src="plugins/tinymce/tinymce.min.js"></script>
+    <script src="plugins/tinymce/tinymce.init.js"></script>
+    <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="plugins/sweetalert2/sweetalert2.init.js"></script>
+    <script src="plugins/persian-calender/persian-date.min.js"></script>
+    <script src="plugins/persian-calender/persian-datepicker.min.js"></script>
+    <script src="plugins/persian-calender/persian-datepicker-initial.js"></script>
+
+
+</body>
+
+</html>

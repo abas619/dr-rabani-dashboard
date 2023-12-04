@@ -15,7 +15,7 @@
   --warning: #ffbc34;
   --error: #df3f3f;
   --disabled: #909eaa;
-  --border: #dee2e6;
+  --border: #c8cbcf;
 }
 
 *,
@@ -4700,7 +4700,8 @@ button.close {
   align-items: center;
   justify-content: flex-end;
   padding: 12px;
-  border-top: 1px solid #e9ecef;
+  border: none;
+  /* border-top: 1px solid #e9ecef; */
 }
 .modal-footer > :not(:first-child) {
   margin-left: 0.25rem;
@@ -8697,7 +8698,7 @@ Rounds
   border-radius: 100%;
 }
 .round.round-info {
-  background: #4798e8;
+  background: var(--primary);
 }
 .round.round-warning {
   background: #ffbc34;
@@ -8706,7 +8707,7 @@ Rounds
   background: #ef6e6e;
 }
 .round.round-success {
-  background: #22c6ab;
+  background: var(--secondary);
 }
 .round.round-primary {
   background: #7460ee;
@@ -9360,7 +9361,7 @@ Table-Jsgrid table
 Main sidebar
 ******************/
 .left-sidebar {
-  position: absolute;
+  position: fixed;
   width: 250px;
   height: 100%;
   top: 0px;
@@ -16095,6 +16096,10 @@ File: scss
   background-color: white;
   padding: 1rem 1rem 0.1rem 1rem;
 }
+.page-action-group .btns-group .btn {
+  margin: 5px 0 5px 5px;
+}
+
 .cards-list {
   margin-top: 15px;
   background-color: white;
@@ -16113,9 +16118,9 @@ File: scss
 }
 .card-course .card-inner {
   border: 1px solid #eee;
-  padding: 10px;
+  padding: 5px;
   display: grid;
-  grid-template-columns: 120px auto;
+  grid-template-columns: 140px auto;
   align-items: center;
   position: relative;
 }
@@ -16165,12 +16170,16 @@ File: scss
   color: white;
   padding: 2px 10px;
 }
-.card-course .dropdown {
+.card-course .dropdown,
+.card-category .dropdown,
+.card-blog .dropdown {
   position: absolute;
   left: 10px;
   top: 10px;
 }
-.card-course .dropdown .btn-secondary {
+.card-course .dropdown .btn-secondary,
+.card-category .dropdown .btn-secondary,
+.card-blog .dropdown .btn-secondary {
   width: 30px;
   height: 30px;
   padding: 5px;
@@ -16183,42 +16192,60 @@ File: scss
   font-size: 16px;
   border: 1px solid #eee;
 }
-.card-course .dropdown .btn-secondary .mdi {
+.card-course .dropdown .btn-secondary .mdi,
+.card-category .dropdown .btn-secondary .mdi,
+.card-blog .dropdown .btn-secondary .mdi {
   margin: 0;
   top: unset;
 }
 
-.card-course .dropdown-menu .dropdown-item {
+.card-course .dropdown-menu .dropdown-item,
+.card-category .dropdown-menu .dropdown-item,
+.card-blog .dropdown-menu .dropdown-item {
   padding: 6px 40px 6px 10px;
   color: var(--textDark);
   position: relative;
   font-size: 13px;
 }
-.card-course .dropdown-menu .dropdown-item .mdi {
+.card-course .dropdown-menu .dropdown-item .mdi,
+.card-category .dropdown-menu .dropdown-item .mdi,
+.card-blog .dropdown-menu .dropdown-item .mdi {
   position: absolute;
   right: 10px;
   top: 1px;
   font-size: 18px;
   color: var(--textGray);
 }
-.card-course .dropdown-menu .dropdown-item:hover {
+.card-course .dropdown-menu .dropdown-item:hover,
+.card-category .dropdown-menu .dropdown-item:hover,
+.card-blog .dropdown-menu .dropdown-item:hover {
   background-color: var(--primaryLight);
   color: var(--primary);
 }
-.card-course .dropdown-menu .dropdown-item:hover .mdi {
+.card-course .dropdown-menu .dropdown-item:hover .mdi,
+.card-category .dropdown-menu .dropdown-item:hover .mdi,
+.card-blog .dropdown-menu .dropdown-item:hover .mdi {
   color: var(--primary);
 }
-.card-course .dropdown-menu .dropdown-item.color-danger {
+.card-course .dropdown-menu .dropdown-item.color-danger,
+.card-category .dropdown-menu .dropdown-item.color-danger,
+.card-blog .dropdown-menu .dropdown-item.color-danger {
   color: var(--error);
 }
-.card-course .dropdown-menu .dropdown-item.color-danger .mdi {
+.card-course .dropdown-menu .dropdown-item.color-danger .mdi,
+.card-category .dropdown-menu .dropdown-item.color-danger .mdi,
+.card-blog .dropdown-menu .dropdown-item.color-danger .mdi {
   color: var(--error);
 }
-.card-course .dropdown-menu .dropdown-item.color-danger:hover {
+.card-course .dropdown-menu .dropdown-item.color-danger:hover,
+.card-category .dropdown-menu .dropdown-item.color-danger:hover,
+.card-blog .dropdown-menu .dropdown-item.color-danger:hover {
   background-color: rgba(223, 63, 63, 0.1);
   color: var(--error);
 }
-.card-course .dropdown-menu .dropdown-item.color-danger:hover .mdi {
+.card-course .dropdown-menu .dropdown-item.color-danger:hover .mdi,
+.card-category .dropdown-menu .dropdown-item.color-danger:hover .mdi,
+.card-blog .dropdown-menu .dropdown-item.color-danger:hover .mdi {
   color: var(--error);
 }
 
@@ -16246,6 +16273,108 @@ File: scss
   display: block;
 }
 
+.card-status .status {
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid var(--secondary);
+  white-space: nowrap;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin: 5px 5px 5px 0;
+  flex-grow: 1;
+  text-align: center;
+}
+.card-status .status strong {
+  font-weight: 600;
+}
+.card-status .status.success {
+  border-color: var(--secondary);
+  color: var(--secondaryDark);
+  background-color: rgba(125, 193, 64, 0.12);
+}
+.card-status .status.error {
+  border-color: var(--error);
+  color: var(--error);
+  background-color: rgba(223, 63, 63, 0.12);
+}
+.card-status .status.warning {
+  border-color: #dba12c;
+  color: #dba12c;
+  background-color: rgba(255, 188, 52, 0.12);
+}
+
+.teacher-thumb {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 0.875rem auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.teacher-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-blog .card-body {
+  padding: 0.5rem;
+}
+.card-blog .card-inner {
+  display: grid;
+  grid-template-columns: 150px auto;
+  align-items: flex-start;
+}
+.card-blog .image-content {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 0;
+  position: relative;
+  margin: 0;
+}
+.card-blog .image-content .img-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.card-blog .image-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+.card-blog .info {
+  padding-left: 35px;
+  padding-top: 5px;
+}
+.card-blog .status {
+  margin-top: 10px;
+}
+.card-blog .status span {
+  padding: 2px 10px;
+  border-radius: 30px;
+}
+.card-blog .status span.active {
+  background-color: var(--secondary);
+  color: #fff;
+}
+.card-blog .status span.diactive {
+  background-color: var(--textGray);
+  color: #fff;
+}
+
+@media (max-width: 575px) {
+  .card-footer.d-flex {
+    flex-direction: column !important;
+  }
+  .card-footer .date {
+    margin-bottom: 10px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   [data-sidebar-position="fixed"] .left-sidebar {
     overflow: auto;
@@ -16262,4 +16391,24 @@ File: scss
   .do-block {
     display: block !important;
   }
+}
+@media (max-width: 768px) {
+  .card-course .card-inner {
+    align-items: flex-start;
+    grid-template-columns: 150px auto;
+  }
+  .card-course .card-inner .info ul {
+    padding-left: 50px;
+  }
+  .card-course .card-inner .info ul li {
+    flex: 1 0 100%;
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+.form-content {
+  background-color: white;
+  padding: 1rem;
+  margin-top: 1rem;
 }
