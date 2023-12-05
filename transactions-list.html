@@ -317,7 +317,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="sidebar-item selected">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="skills-list.html">
                                 <i class="mdi mdi-book-open-page-variant"></i>
                                 <span class="hide-menu">مهارت‌ها</span>
@@ -327,7 +327,7 @@
                         <li class="nav-small-cap">
                             <span class="hide-menu">امور مالی</span>
                         </li>
-                        <li class="sidebar-item">
+                        <li class="sidebar-item selected">
                             <a class="sidebar-link" href="transactions-list.html">
                                 <i class="mdi mdi-receipt-text-check"></i>
                                 <span class="hide-menu">لیست تراکنش‌ها</span>
@@ -439,12 +439,12 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">مهارت‌ها</h4>
+                        <h4 class="page-title">تراکنش‌ها</h4>
                         <div class="mt-2">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">داشبورد</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">لیست مهارت‌ها</li>
+                                    <li class="breadcrumb-item active" aria-current="page">لیست تراکنش‌ها</li>
                                 </ol>
                             </nav>
                         </div>
@@ -454,11 +454,6 @@
             <div class="container-fluid">
                 <div class="page-action-group">
                     <div class="btns-group mb-3">
-                        <a href="skills-new.html" class="btn btn-primary btn-rounded">
-                            <span class="mdi mdi-plus-circle-outline"></span>مهارت
-                            جدید</a>
-                        <button type="submit" class="btn btn-secondary btn-rounded icon-right"><i
-                                class="mdi mdi-refresh"></i>بروزرسانی</button>
                         <button type="button" class="btn btn-outline-secondary btn-rounded" data-bs-toggle="collapse"
                             href="#filter-content">
                             <span class="mdi mdi-magnify"></span>جستجو و فیلتر</button>
@@ -468,26 +463,22 @@
                             <div class="row">
                                 <div class="col-lg-3">
                                     <div class="form-group">
-                                        <label class="form-label">عنوان جستجو</label>
+                                        <label class="form-label">نام مشتری</label>
+                                        <input type="text" class="form-control" placeholder="جستجو در دوره‌ها">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-label">کد تراکنش بانک</label>
                                         <input type="text" class="form-control" placeholder="جستجو در دوره‌ها">
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="form-group mb-1">
-                                        <label class="form-label">جستجو در</label>
+                                        <label class="form-label">وضعیت تراکنش</label>
                                         <select class="form-select">
-                                            <option>نام استاد</option>
-                                            <option>فامیلی استاد</option>
-                                            <option>شناسنامه استاد</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group mb-1">
-                                        <label class="form-label">شامل کلمه یا عبارت</label>
-                                        <select class="form-select">
-                                            <option>کلمه</option>
-                                            <option>3</option>
+                                            <option>موفق</option>
+                                            <option>ناموفق</option>
                                         </select>
                                     </div>
                                 </div>
@@ -505,180 +496,55 @@
                 </div>
                 <!-- لیست بلاگ -->
                 <div class="cards-list">
-                    <h5 class="inner-title">لیست بلاگ‌ها <span>(108 بلاگ)</span></h5>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-12">
-                            <div class="card card-blog">
-                                <div class="card-body">
-                                    <div class="card-inner">
-                                        <div class="image-content">
-                                            <div class="img-inner">
-                                                <img src="https://via.placeholder.com/150x100/ccc.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="info m-r-10">
-                                            <h6>بیزینس کوچینگ (دوره هشتم)</h6>
-                                            <span class="text-muted">bc</span>
-                                            <div class="status">آیدی : <span>73</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
-                                            <i class="mdi mdi-dots-horizontal"></i>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="skills-students.html"><i
-                                                        class="mdi mdi-account-group"></i>
-                                                    کاربران این مهارت
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#"><i class="mdi mdi-content-copy"></i>
-                                                    ایجاد کپی از این مهارت
-                                                </a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="blog-new.html"><i
-                                                        class="mdi mdi-pencil-outline"></i>ویرایش</a>
-                                            </li>
-                                            <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modal-delete"><i
-                                                        class="mdi mdi-trash-can-outline"></i>حذف</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                            <div class="card card-blog">
-                                <div class="card-body">
-                                    <div class="card-inner">
-                                        <div class="image-content">
-                                            <div class="img-inner">
-                                                <img src="https://via.placeholder.com/150x100/ccc.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="info m-r-10">
-                                            <h6>مهارت‌ها و تکنیک‌های کوچینگ</h6>
-                                            <span class="text-muted">مهارت‌ها و تکنیک‌های کوچینگ</span>
-                                            <div class="status">آیدی : <span>71</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
-                                            <i class="mdi mdi-dots-horizontal"></i>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="skills-students.html"><i
-                                                        class="mdi mdi-account-group"></i>
-                                                    کاربران این مهارت
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#"><i class="mdi mdi-content-copy"></i>
-                                                    ایجاد کپی از این مهارت
-                                                </a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="blog-new.html"><i
-                                                        class="mdi mdi-pencil-outline"></i>ویرایش</a>
-                                            </li>
-                                            <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modal-delete"><i
-                                                        class="mdi mdi-trash-can-outline"></i>حذف</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12">
-                            <div class="card card-blog">
-                                <div class="card-body">
-                                    <div class="card-inner">
-                                        <div class="image-content">
-                                            <div class="img-inner">
-                                                <img src="https://via.placeholder.com/150x100/ccc.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="info m-r-10">
-                                            <h6>تربیت کوچ حرفه‌ای کسب و کار 13</h6>
-                                            <span class="text-muted">مشاهده : 220 بازدید</span>
-                                            <div class="status">آیدی : <span>12</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
-                                            <i class="mdi mdi-dots-horizontal"></i>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="skills-students.html"><i
-                                                        class="mdi mdi-account-group"></i>
-                                                    کاربران این مهارت
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#"><i class="mdi mdi-content-copy"></i>
-                                                    ایجاد کپی از این مهارت
-                                                </a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="blog-new.html"><i
-                                                        class="mdi mdi-pencil-outline"></i>ویرایش</a>
-                                            </li>
-                                            <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal"
-                                                    data-bs-target="#modal-delete"><i
-                                                        class="mdi mdi-trash-can-outline"></i>حذف</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Delete -->
-    <div class="modal fade" id="modal-delete" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5"><i class="mdi mdi-trash-can-outline"></i>حذف</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="msg-alert">
-                        <h6>این مهارت حذف شود؟</h6>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary btn-rounded"
-                        data-bs-dismiss="modal">خیر</button>
-                    <button type="button" class="btn btn-danger btn-rounded">بله، حذف شود</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Set Status -->
-    <div class="modal fade" id="modal-setStatus" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5"><i class="mdi mdi-eye-check"></i>تعیین وضعیت پست</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group mb-1">
-                        <label class="form-label">انتخاب وضعیت</label>
-                        <select class="form-select">
-                            <option>فعال</option>
-                            <option>غیرفعال</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary btn-rounded"
-                        data-bs-dismiss="modal">خیر</button>
-                    <button type="button" class="btn btn-danger btn-rounded">بله، حذف شود</button>
+                    <h5 class="inner-title">لیست تراکنش‌ها <span>(1,609 تراکنش)</span></h5>
+                    <table class="table table-striped align-middle">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">شماره تراکنش</th>
+                                <th scope="col">نوع تراکنش</th>
+                                <th scope="col">تاریخ</th>
+                                <th scope="col">نام کاربر</th>
+                                <th scope="col">شماره همراه</th>
+                                <th scope="col">پیام بانک</th>
+                                <th scope="col">وضعیت پرداخت</th>
+                                <th scope="col">کد تراکنش بانک</th>
+                                <th scope="col">کد تخفیف</th>
+                                <th scope="col">مبلغ(تومان)</th>
+                                <th scope="col">جزییات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2087001424</td>
+                                <td>مصرف کیف پول</td>
+                                <td>13 آذر 1402</td>
+                                <td>ندا مهدی زاده</td>
+                                <td>+989130700471</td>
+                                <td>ارسال شد</td>
+                                <td>موفق</td>
+                                <td>4489630021</td>
+                                <td>-</td>
+                                <td>160,000</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2087001404</td>
+                                <td>شارژ کیف پول</td>
+                                <td>24 آبان 1402</td>
+                                <td>حامد صابری</td>
+                                <td>+989126721368</td>
+                                <td>ارسال شد</td>
+                                <td>ناموفق</td>
+                                <td>1000035489</td>
+                                <td>-</td>
+                                <td>98,000</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
