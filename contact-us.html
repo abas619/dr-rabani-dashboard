@@ -333,7 +333,7 @@
                                 <span class="hide-menu">لیست تراکنش‌ها</span>
                             </a>
                         </li>
-                        <li class="sidebar-item selected">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="discounts.html">
                                 <i class="mdi mdi-percent-circle"></i>
                                 <span class="hide-menu">تخفیف‌ها</span>
@@ -423,7 +423,7 @@
                                 <span class="hide-menu">خبرنامه</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
+                        <li class="sidebar-item selected">
                             <a class="sidebar-link" href="contact-us.html">
                                 <i class="mdi mdi-face-agent"></i>
                                 <span class="hide-menu">ارتباط با ما</span>
@@ -439,13 +439,12 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">کد تخفیف جدید</h4>
+                        <h4 class="page-title">ارتباط با ما</h4>
                         <div class="mt-2">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">داشبورد</a></li>
-                                    <li class="breadcrumb-item"><a href="#">لیست تخفیف‌ها</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">تخفیف جدید</li>
+                                    <li class="breadcrumb-item active" aria-current="page">ارتباط با ما</li>
                                 </ol>
                             </nav>
                         </div>
@@ -455,124 +454,125 @@
             <div class="container-fluid">
                 <div class="page-action-group">
                     <div class="btns-group mb-3">
-                        <button class="btn btn-secondary btn-rounded icon-right">
-                            <span class="mdi mdi-check"></span>ثبت تغییرات</button>
-                        <a href="discounts.html" class="btn btn-outline-secondary btn-rounded">
-                            <span class="mdi mdi-arrow-left"></span>بازگشت</a>
+                        <button type="button" class="btn btn-outline-secondary btn-rounded" data-bs-toggle="collapse"
+                            href="#filter-content">
+                            <span class="mdi mdi-magnify"></span>جستجو و فیلتر</button>
                     </div>
-                </div>
-                <div class="card mt-3 border-0">
-                    <div class="card-body">
-                        <h4 class="card-title">اطلاعات کد تخفیف</h4>
-                        <form class="m-t-20">
+                    <div class="collapse" id="filter-content">
+                        <div class="card card-body">
                             <div class="row">
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-3">
                                     <div class="form-group">
-                                        <label class="form-label">عنوان</label>
-                                        <input type="text" class="form-control" placeholder="">
+                                        <label class="form-label">عنوان جستجو</label>
+                                        <input type="text" class="form-control" placeholder="جستجو در دوره‌ها">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">کد تخفیف</label>
-                                        <input type="text" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">قیمت</label>
-                                        <input type="text" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">حداقل قیمت</label>
-                                        <input type="number" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">حداکثر قیمت</label>
-                                        <input type="number" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
+                                <div class="col-lg-3">
                                     <div class="form-group mb-1">
-                                        <label class="form-label">نوع تخفیف</label>
+                                        <label class="form-label">جستجو در</label>
                                         <select class="form-select">
-                                            <option>تومان</option>
-                                            <option>درصد</option>
+                                            <option>نام استاد</option>
+                                            <option>فامیلی استاد</option>
+                                            <option>شناسنامه استاد</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="radio-group">
-                                        <label class="form-label">وضعیت تخفیف</label>
-                                        <div class="radio-inner">
-                                            <div class="custom-control custom-radio custom-control-inline m-t-10">
-                                                <input type="radio" class="custom-control-input" id="custom-radio-01"
-                                                    name="radio-status" required checked>
-                                                <label class="custom-control-label" for="custom-radio-01">فعال</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline m-t-10">
-                                                <input type="radio" class="custom-control-input" id="custom-radio-02"
-                                                    name="radio-status" required>
-                                                <label class="custom-control-label"
-                                                    for="custom-radio-02">فیرفعال</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="radio-group">
-                                        <label class="form-label">افزودن به دیگر مقادیر</label>
-                                        <div class="radio-inner">
-                                            <div class="custom-control custom-radio custom-control-inline m-t-10">
-                                                <input type="radio" class="custom-control-input" id="custom-radio-03"
-                                                    name="radio-stacked" required checked>
-                                                <label class="custom-control-label" for="custom-radio-03">بله</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline m-t-10">
-                                                <input type="radio" class="custom-control-input" id="custom-radio-04"
-                                                    name="radio-stacked" required>
-                                                <label class="custom-control-label" for="custom-radio-04">خیر</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">زمان شروع</label>
-                                        <input type="text" class="form-control date-picker" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">زمان پایان</label>
-                                        <input type="text" class="form-control date-picker" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">تعداد محدودیت استفاده</label>
-                                        <input type="text" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
+                                <div class="col-lg-3">
                                     <div class="form-group mb-1">
-                                        <label class="form-label">لیست درس‌ها</label>
-                                        <select class="select2 form-control select2-basic-multiple" multiple="multiple"
-                                            style="width: 100%; height:41px;">
-                                            <option value="AZ">بیزینس کوچینگ</option>
-                                            <option value="CO">تربیت کوچ</option>
-                                            <option value="ID">فایل</option>
-                                            <option value="MT">لندینگ کتابدان</option>
+                                        <label class="form-label">شامل کلمه یا عبارت</label>
+                                        <select class="form-select">
+                                            <option>کلمه</option>
+                                            <option>3</option>
                                         </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group mb-0">
+                                        <button type="button" class="btn btn-primary w-100">
+                                            <span class="mdi mdi-magnify"></span>
+                                            جستجو
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
+                </div>
+
+                <!-- لیست گواهینامه کاربران -->
+                <div class="cards-list">
+                    <h5 class="inner-title">لیست کاربران <span>(8,892 کاربر)</span></h5>
+                    <table class="table table-striped align-middle">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">کد کاربری</th>
+                                <th scope="col">نام</th>
+                                <th scope="col">عنوان</th>
+                                <th scope="col">موبایل</th>
+                                <th scope="col">نوع</th>
+                                <th scope="col">وضعیت</th>
+                                <th scope="col">زمان</th>
+                                <th scope="col">پیام</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>8341</td>
+                                <td>2087109593</td>
+                                <td>شیرین زارعیان</td>
+                                <td>گواهینامه دوره تربیت کوچ</td>
+                                <td>+989127063289</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>جمعه 17 آذر 1402</td>
+                                <td>
+                                    سلام و عرض ادب و احترام در حساب کاربری من قبلا گواهینامه مهارت تربیت کوچ بود اما
+                                    حالا پاک شده و موجود نیست وبا توجه به
+                                    نیاز من جهت ثبت نام در کاری لطفا گواهینامه در در حساب کاربری بنده قرار دهید.ممنونم
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>115</td>
+                                <td>2087109593</td>
+                                <td>اسماعیل نیلوفری</td>
+                                <td>ارتباط مستقیم</td>
+                                <td>09396731496</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>جمعه 17 آذر 1402</td>
+                                <td>
+                                    سلام من می خواهم شخصاً با دکتر محمد مهدی ربانی صحبت کنم. چه کاری باید انجام بدم تا
+                                    بتونم با دکتر صحبت کنم.خیلی آرزو دارم
+                                    که با دکتر صحبت کنم. لطفاً بهم بگید که چطور میتوانم با دکتر صحبت کنم.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete -->
+    <div class="modal fade" id="modal-delete" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5"><i class="mdi mdi-trash-can-outline"></i>حذف</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="msg-alert">
+                        <h6>این فایل حذف شود؟</h6>
+                        <p>با حذف این تخفیف تمام رکورد‌های مربوط به این فایل حذف خواهد شد</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary btn-rounded"
+                        data-bs-dismiss="modal">خیر</button>
+                    <button type="button" class="btn btn-danger btn-rounded">بله، حذف شود</button>
                 </div>
             </div>
         </div>

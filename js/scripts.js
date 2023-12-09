@@ -30,3 +30,12 @@ function toggleRadio_files(radioNumber) {
   });
   activeForm.classList.add("active");
 }
+
+function displayFileName() {
+  var inputsFileUpload = document.querySelectorAll(".input-fileUpload");
+  inputsFileUpload.forEach((input) => {
+    input.addEventListener("click", function () {
+      var fileName = input.value;
+    });
+  });
+}

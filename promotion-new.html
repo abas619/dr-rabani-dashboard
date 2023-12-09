@@ -333,7 +333,7 @@
                                 <span class="hide-menu">لیست تراکنش‌ها</span>
                             </a>
                         </li>
-                        <li class="sidebar-item selected">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="discounts.html">
                                 <i class="mdi mdi-percent-circle"></i>
                                 <span class="hide-menu">تخفیف‌ها</span>
@@ -349,7 +349,7 @@
                                 <span class="hide-menu">زون‌های صفحه اول</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
+                        <li class="sidebar-item selected">
                             <a class="sidebar-link" href="promotions-list.html">
                                 <i class="mdi mdi-image-multiple"></i>
                                 <span class="hide-menu">پروموشن‌ها</span>
@@ -439,13 +439,13 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">کد تخفیف جدید</h4>
+                        <h4 class="page-title">بنر جدید</h4>
                         <div class="mt-2">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">داشبورد</a></li>
-                                    <li class="breadcrumb-item"><a href="#">لیست تخفیف‌ها</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">تخفیف جدید</li>
+                                    <li class="breadcrumb-item"><a href="#">لیست پروموشن‌ها</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">بنر جدید</li>
                                 </ol>
                             </nav>
                         </div>
@@ -455,112 +455,83 @@
             <div class="container-fluid">
                 <div class="page-action-group">
                     <div class="btns-group mb-3">
-                        <button class="btn btn-secondary btn-rounded icon-right">
+                        <button type="button" class="btn btn-secondary btn-rounded">
                             <span class="mdi mdi-check"></span>ثبت تغییرات</button>
-                        <a href="discounts.html" class="btn btn-outline-secondary btn-rounded">
+                        <a href="zone-new.html" class="btn btn-outline-secondary btn-rounded">
                             <span class="mdi mdi-arrow-left"></span>بازگشت</a>
                     </div>
                 </div>
                 <div class="card mt-3 border-0">
                     <div class="card-body">
-                        <h4 class="card-title">اطلاعات کد تخفیف</h4>
+                        <h4 class="card-title">اطلاعات بنر</h4>
                         <form class="m-t-20">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <label class="form-label">عنوان</label>
+                                        <label class="form-label">موضوع</label>
                                         <input type="text" class="form-control" placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">کد تخفیف</label>
-                                        <input type="text" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">قیمت</label>
-                                        <input type="text" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">حداقل قیمت</label>
-                                        <input type="number" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">حداکثر قیمت</label>
-                                        <input type="number" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
                                     <div class="form-group mb-1">
-                                        <label class="form-label">نوع تخفیف</label>
+                                        <label class="form-label">مکان بنر</label>
                                         <select class="form-select">
-                                            <option>تومان</option>
-                                            <option>درصد</option>
+                                            <option>اسلایدر بالا</option>
+                                            <option>مربع بالا</option>
+                                            <option>وسط</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">لینک سایت</label>
+                                        <input type="url" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
                                     <div class="radio-group">
-                                        <label class="form-label">وضعیت تخفیف</label>
+                                        <label class="form-label">لینک فعال باشد؟</label>
                                         <div class="radio-inner">
                                             <div class="custom-control custom-radio custom-control-inline m-t-10">
                                                 <input type="radio" class="custom-control-input" id="custom-radio-01"
-                                                    name="radio-status" required checked>
-                                                <label class="custom-control-label" for="custom-radio-01">فعال</label>
+                                                    name="radio-links" required checked>
+                                                <label class="custom-control-label" for="custom-radio-01">بله</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline m-t-10">
                                                 <input type="radio" class="custom-control-input" id="custom-radio-02"
-                                                    name="radio-status" required>
-                                                <label class="custom-control-label"
-                                                    for="custom-radio-02">فیرفعال</label>
+                                                    name="radio-links" required>
+                                                <label class="custom-control-label" for="custom-radio-02">خیر</label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">الویت نمایش</label>
+                                        <input type="number" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
                                     <div class="radio-group">
-                                        <label class="form-label">افزودن به دیگر مقادیر</label>
+                                        <label class="form-label">وضعیت</label>
                                         <div class="radio-inner">
                                             <div class="custom-control custom-radio custom-control-inline m-t-10">
                                                 <input type="radio" class="custom-control-input" id="custom-radio-03"
-                                                    name="radio-stacked" required checked>
-                                                <label class="custom-control-label" for="custom-radio-03">بله</label>
+                                                    name="radio-status" required checked>
+                                                <label class="custom-control-label" for="custom-radio-03">فعال</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline m-t-10">
                                                 <input type="radio" class="custom-control-input" id="custom-radio-04"
-                                                    name="radio-stacked" required>
-                                                <label class="custom-control-label" for="custom-radio-04">خیر</label>
+                                                    name="radio-status" required>
+                                                <label class="custom-control-label"
+                                                    for="custom-radio-04">غیرفعال</label>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">زمان شروع</label>
-                                        <input type="text" class="form-control date-picker" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">زمان پایان</label>
-                                        <input type="text" class="form-control date-picker" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">تعداد محدودیت استفاده</label>
-                                        <input type="text" class="form-control" placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group mb-1">
-                                        <label class="form-label">لیست درس‌ها</label>
+                                        <label class="form-label">انتخاب دوره‌ها</label>
                                         <select class="select2 form-control select2-basic-multiple" multiple="multiple"
                                             style="width: 100%; height:41px;">
                                             <option value="AZ">بیزینس کوچینگ</option>
@@ -570,6 +541,30 @@
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- تصویر برای حالت دسکتاپ -->
+                <div class="card mt-3 border-0">
+                    <div class="card-body">
+                        <h4 class="card-title">تصویر برای حالت دسکتاپ</h4>
+                        <h6 class="card-subtitle">تصاویر با پسوند JPG, PNG, JPEG قایل قبول می‌باشد</h6>
+                        <form action="/file-upload" class="dropzone m-t-20" id="file-images-upload-cover">
+                            <div class="fallback">
+                                <input name="file" type="file" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- تصویر برای حالت موبایل -->
+                <div class="card mt-3 border-0">
+                    <div class="card-body">
+                        <h4 class="card-title">تصویر برای حالت موبایل</h4>
+                        <h6 class="card-subtitle">تصاویر با پسوند JPG, PNG, JPEG قایل قبول می‌باشد</h6>
+                        <form action="/file-upload" class="dropzone m-t-20" id="file-images-upload-mobile">
+                            <div class="fallback">
+                                <input name="file" type="file" />
                             </div>
                         </form>
                     </div>

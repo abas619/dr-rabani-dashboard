@@ -333,7 +333,7 @@
                                 <span class="hide-menu">لیست تراکنش‌ها</span>
                             </a>
                         </li>
-                        <li class="sidebar-item selected">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="discounts.html">
                                 <i class="mdi mdi-percent-circle"></i>
                                 <span class="hide-menu">تخفیف‌ها</span>
@@ -349,7 +349,7 @@
                                 <span class="hide-menu">زون‌های صفحه اول</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
+                        <li class="sidebar-item selected">
                             <a class="sidebar-link" href="promotions-list.html">
                                 <i class="mdi mdi-image-multiple"></i>
                                 <span class="hide-menu">پروموشن‌ها</span>
@@ -439,13 +439,12 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">کد تخفیف جدید</h4>
+                        <h4 class="page-title">پروموشن‌ها</h4>
                         <div class="mt-2">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">داشبورد</a></li>
-                                    <li class="breadcrumb-item"><a href="#">لیست تخفیف‌ها</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">تخفیف جدید</li>
+                                    <li class="breadcrumb-item active" aria-current="page">لیست پروموشن‌ها</li>
                                 </ol>
                             </nav>
                         </div>
@@ -455,128 +454,127 @@
             <div class="container-fluid">
                 <div class="page-action-group">
                     <div class="btns-group mb-3">
-                        <button class="btn btn-secondary btn-rounded icon-right">
-                            <span class="mdi mdi-check"></span>ثبت تغییرات</button>
-                        <a href="discounts.html" class="btn btn-outline-secondary btn-rounded">
-                            <span class="mdi mdi-arrow-left"></span>بازگشت</a>
+                        <a href="promotion-new.html" class="btn btn-primary btn-rounded">
+                            <span class="mdi mdi-plus-circle-outline"></span>بنر جدید</a>
+                        <button type="button" class="btn btn-outline-secondary btn-rounded" data-bs-toggle="collapse"
+                            href="#filter-content">
+                            <span class="mdi mdi-magnify"></span>جستجو و فیلتر</button>
                     </div>
-                </div>
-                <div class="card mt-3 border-0">
-                    <div class="card-body">
-                        <h4 class="card-title">اطلاعات کد تخفیف</h4>
-                        <form class="m-t-20">
+                    <div class="collapse" id="filter-content">
+                        <div class="card card-body">
                             <div class="row">
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-4">
                                     <div class="form-group">
                                         <label class="form-label">عنوان</label>
-                                        <input type="text" class="form-control" placeholder="">
+                                        <input type="text" class="form-control" placeholder="جستجو در زون‌ها">
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">کد تخفیف</label>
-                                        <input type="text" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">قیمت</label>
-                                        <input type="text" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">حداقل قیمت</label>
-                                        <input type="number" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">حداکثر قیمت</label>
-                                        <input type="number" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group mb-1">
-                                        <label class="form-label">نوع تخفیف</label>
-                                        <select class="form-select">
-                                            <option>تومان</option>
-                                            <option>درصد</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="radio-group">
-                                        <label class="form-label">وضعیت تخفیف</label>
-                                        <div class="radio-inner">
-                                            <div class="custom-control custom-radio custom-control-inline m-t-10">
-                                                <input type="radio" class="custom-control-input" id="custom-radio-01"
-                                                    name="radio-status" required checked>
-                                                <label class="custom-control-label" for="custom-radio-01">فعال</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline m-t-10">
-                                                <input type="radio" class="custom-control-input" id="custom-radio-02"
-                                                    name="radio-status" required>
-                                                <label class="custom-control-label"
-                                                    for="custom-radio-02">فیرفعال</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="radio-group">
-                                        <label class="form-label">افزودن به دیگر مقادیر</label>
-                                        <div class="radio-inner">
-                                            <div class="custom-control custom-radio custom-control-inline m-t-10">
-                                                <input type="radio" class="custom-control-input" id="custom-radio-03"
-                                                    name="radio-stacked" required checked>
-                                                <label class="custom-control-label" for="custom-radio-03">بله</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline m-t-10">
-                                                <input type="radio" class="custom-control-input" id="custom-radio-04"
-                                                    name="radio-stacked" required>
-                                                <label class="custom-control-label" for="custom-radio-04">خیر</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">زمان شروع</label>
-                                        <input type="text" class="form-control date-picker" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">زمان پایان</label>
-                                        <input type="text" class="form-control date-picker" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">تعداد محدودیت استفاده</label>
-                                        <input type="text" class="form-control" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form-group mb-1">
-                                        <label class="form-label">لیست درس‌ها</label>
-                                        <select class="select2 form-control select2-basic-multiple" multiple="multiple"
-                                            style="width: 100%; height:41px;">
-                                            <option value="AZ">بیزینس کوچینگ</option>
-                                            <option value="CO">تربیت کوچ</option>
-                                            <option value="ID">فایل</option>
-                                            <option value="MT">لندینگ کتابدان</option>
-                                        </select>
+                                <div class="col-lg-3">
+                                    <div class="form-group mb-0">
+                                        <button type="button" class="btn btn-primary w-100">
+                                            <span class="mdi mdi-magnify"></span>
+                                            جستجو
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- لیست زون‌ها -->
+                <div class="cards-list">
+                    <h5 class="inner-title">لیست آیتم‌ها <span>(12 آیتم)</span></h5>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card card-blog">
+                                <div class="card-body">
+                                    <div class="card-inner">
+                                        <div class="thumb">
+                                            <img src="https://via.placeholder.com/150x150/ccc.png" class="w-100" alt="">
+                                        </div>
+                                        <div class="info m-r-10">
+                                            <h6>بنر دوره های رایگان</h6>
+                                            <span class="text-body">مکان بنر : بالا وسط گوشه</span>
+                                            <div class="status">وضعیت : <span
+                                                    class="badge fs-14 rounded-full fw-semibold badge-success px-2">فعال</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="blog-new.html"><i
+                                                        class="mdi mdi-pencil-outline"></i>ویرایش</a>
+                                            </li>
+                                            <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-delete"><i
+                                                        class="mdi mdi-trash-can-outline"></i>حذف</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card card-blog">
+                                <div class="card-body">
+                                    <div class="card-inner">
+                                        <div class="thumb">
+                                            <img src="https://via.placeholder.com/150x100/ccc.png" class="w-100" alt="">
+                                        </div>
+                                        <div class="info m-r-10">
+                                            <h6>بنر دوره های رایگان</h6>
+                                            <span class="text-body">مکان بنر : بالا وسط گوشه</span>
+                                            <div class="status">وضعیت : <span
+                                                    class="badge fs-14 rounded-full fw-semibold badge-success px-2">فعال</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="blog-new.html"><i
+                                                        class="mdi mdi-pencil-outline"></i>ویرایش</a>
+                                            </li>
+                                            <li><a class="dropdown-item color-danger" href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-delete"><i
+                                                        class="mdi mdi-trash-can-outline"></i>حذف</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Modal Delete -->
+    <div class="modal fade" id="modal-delete" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5"><i class="mdi mdi-trash-can-outline"></i>حذف</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="msg-alert">
+                        <h6>این گروه حذف شود؟</h6>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary btn-rounded"
+                        data-bs-dismiss="modal">خیر</button>
+                    <button type="button" class="btn btn-danger btn-rounded">بله، حذف شود</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 
